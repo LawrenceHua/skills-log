@@ -38,7 +38,22 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
-## This week's 10 skills
+## This week's 10 skills (2026-W29)
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`negative-prompt-leakage`](skills/negative-prompt-leakage/SKILL.md) | Warns against spelling out literal forbidden phrases in ✗-example prompt blocks — models pattern-match into them and reproduce the exact thing you forbade | Prompts where the model keeps producing an output you explicitly told it never to produce |
+| [`fail-closed-guards`](skills/fail-closed-guards/SKILL.md) | Makes sure a guard's missing-data fallback REFUSES the action instead of allowing it, and that every write-site actually populates the field the guard reads | Writing or reviewing any permission check, gate, or precondition with a fallback default |
+| [`twilio-a2p-10dlc-compliance`](skills/twilio-a2p-10dlc-compliance/SKILL.md) | Decodes Twilio 10DLC A2P rejection codes, gives the exact website compliance checklist, and covers the non-obvious delete-and-repost resubmission mechanics | A FAILED/rejected Twilio A2P campaign, or building an SMS opt-in flow before submitting one |
+| [`skill-estate-guardian`](skills/skill-estate-guardian/SKILL.md) | Lints your own AI-agent tooling (skills, agents, workflows, hooks) for leaked tokens, retired model IDs, unpinned models, and gate docs with no real enforcement | A pre-flight check after writing/editing a skill or agent, or a periodic estate cleanup |
+| [`roast-me`](skills/roast-me/SKILL.md) | Multi-round adversarial questioning across failure modes, edge cases, security, and performance that forces you to defend a design before you build it | Stress-testing a plan or architecture decision before you commit to building it |
+| [`ai-tells-check`](skills/ai-tells-check/SKILL.md) | A fast linter for the highest-signal "AI-slop" tells in generated frontend/marketing copy — em-dashes, numbered eyebrows, BETA labels, filler phrases | A fast last check after generating any landing page, hero section, or marketing UI |
+| [`data-illustration`](skills/data-illustration/SKILL.md) | Turns scores/metrics into an accurate, data-driven SVG illustration instead of a generic chart, with AI-generated imagery layered in only as atmosphere | Visualizing scores/metrics/dimensions when a plain bar/line/pie chart would be boring or off-brand |
+| [`agent-engineering-checklist`](skills/agent-engineering-checklist/SKILL.md) | A curated checklist of ~18 evidence-grounded rules for building reliable AI agents — tool-use gating, verification-before-trust, context engineering, trust boundaries | Designing a new agent/workflow, or reviewing an existing one for reliability gaps |
+| [`agent-quality-loop`](skills/agent-quality-loop/SKILL.md) | Iteratively grades and improves a conversational agent's prompt quality via synthetic dialogs + hard checks + an LLM judge, with human-approved targeted edits | After any meaningful change to a conversational agent's system prompt, or as a pre-release regression gate |
+| [`ai-ugc-video-pipeline`](skills/ai-ugc-video-pipeline/SKILL.md) | A gated pipeline for AI-presenter short-form marketing video, with hard-won fixes for the media-validation, audio-sync, and judge-hallucination traps | Producing or re-cutting a short-form AI-presenter product/marketing video |
+
+## Week of 2026-07-06
 
 | Skill | What it does | Use it for |
 |---|---|---|

@@ -1,6 +1,82 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-12",
   "weeks": [
+    {
+      "week": "2026-W29",
+      "date": "2026-07-12",
+      "skills": [
+        {
+          "name": "negative-prompt-leakage",
+          "slug": "negative-prompt-leakage",
+          "description": "When writing FORBIDDEN/NEVER/✗ example blocks in an LLM prompt, never spell out the literal forbidden phrase — models pattern-match into the bad example and reproduce it; use a short abstract marker instead.",
+          "useFor": "Prompts where the model keeps producing an output you explicitly told it never to produce.",
+          "path": "skills/negative-prompt-leakage"
+        },
+        {
+          "name": "fail-closed-guards",
+          "slug": "fail-closed-guards",
+          "description": "When a guard/gate/precondition depends on data that might be missing, make the missing-data fallback REFUSE the action, not allow it — and confirm every write-site actually populates the field the guard reads.",
+          "useFor": "Writing or reviewing any permission check, gate, or precondition with a fallback default.",
+          "path": "skills/fail-closed-guards"
+        },
+        {
+          "name": "twilio-a2p-10dlc-compliance",
+          "slug": "twilio-a2p-10dlc-compliance",
+          "description": "Get a Twilio 10DLC A2P SMS campaign approved, or un-stick a rejected one — decodes the common rejection codes and covers the non-obvious resubmission mechanics.",
+          "useFor": "A FAILED/rejected Twilio A2P campaign, or building an SMS opt-in flow before submitting one.",
+          "path": "skills/twilio-a2p-10dlc-compliance"
+        },
+        {
+          "name": "skill-estate-guardian",
+          "slug": "skill-estate-guardian",
+          "description": "Continuously lint your own AI-agent tooling (skills, subagent definitions, workflow scripts, hooks) for the defect classes that quietly rot an agent estate — leaked tokens, retired model IDs, unpinned models, gate docs with no real enforcement.",
+          "useFor": "A pre-flight check after writing/editing a skill or agent, or a periodic cleanup pass over your whole skills directory.",
+          "path": "skills/skill-estate-guardian"
+        },
+        {
+          "name": "roast-me",
+          "slug": "roast-me",
+          "description": "Multi-round adversarial questioning that forces you to defend a design BEFORE you build it — generates hard questions across failure modes, edge cases, security, and performance, then iterates on your answers.",
+          "useFor": "Stress-testing a plan or architecture decision before you commit to building it.",
+          "path": "skills/roast-me"
+        },
+        {
+          "name": "ai-tells-check",
+          "slug": "ai-tells-check",
+          "description": "A pre-flight linter for the highest-signal 'AI-slop' tells in generated frontend/marketing copy — em-dashes, numbered eyebrows, BETA labels, generic filler phrases, decorative status dots.",
+          "useFor": "A fast last check after generating any landing page, hero section, or marketing UI.",
+          "path": "skills/ai-tells-check"
+        },
+        {
+          "name": "data-illustration",
+          "slug": "data-illustration",
+          "description": "Turn a set of scores/metrics into an accurate AND illustrative graphic — the data literally drives the shape of the artwork, so it reads as a designed illustration instead of a generic chart.",
+          "useFor": "Visualizing scores/metrics/dimensions when a plain bar/line/pie chart would be boring or off-brand.",
+          "path": "skills/data-illustration"
+        },
+        {
+          "name": "agent-engineering-checklist",
+          "slug": "agent-engineering-checklist",
+          "description": "A curated checklist of ~18 evidence-grounded rules for building reliable AI agents — tool-use gating, verification-before-trust, context engineering, and safety/trust boundaries.",
+          "useFor": "Designing a new agent/workflow, or reviewing an existing one for reliability gaps before more autonomous use.",
+          "path": "skills/agent-engineering-checklist"
+        },
+        {
+          "name": "agent-quality-loop",
+          "slug": "agent-quality-loop",
+          "description": "Iteratively grade and improve a conversational AI agent's prompt quality without real end-users — synthetic dialogs, hard checks + an LLM judge, targeted human-approved prompt edits until quality plateaus.",
+          "useFor": "After any meaningful change to a conversational agent's system prompt, or as a regression gate before a demo/release.",
+          "path": "skills/agent-quality-loop"
+        },
+        {
+          "name": "ai-ugc-video-pipeline",
+          "slug": "ai-ugc-video-pipeline",
+          "description": "A hardened, gated pipeline for producing short-form AI-generated 'UGC-style' marketing video — hard-won fixes for the media-validation, audio-sync, and judge-hallucination traps that silently ship broken output.",
+          "useFor": "Producing or re-cutting a short-form AI-presenter product/marketing video.",
+          "path": "skills/ai-ugc-video-pipeline"
+        }
+      ]
+    },
     {
       "week": "2026-W28",
       "date": "2026-07-06",
