@@ -38,7 +38,22 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
-## This week's 10 skills (2026-W29)
+## This week's 10 skills (2026-W30)
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`architecture-invariant-audit`](skills/architecture-invariant-audit/SKILL.md) | A read-only, dependency-free script that checks a layered codebase against documented architecture rules (layer crossings, legacy reuse, anti-pattern regressions, doc drift) and fails CI when they're violated | Enforcing a layered architecture boundary, tracking a strangler-pattern legacy file's shrink, or catching a previously-fixed anti-pattern before it regresses elsewhere |
+| [`policy-prompt-drift-check`](skills/policy-prompt-drift-check/SKILL.md) | Compares a code-level policy module against the natural-language prompt it governs, flags missing anchors and direct ALLOW/FORBID contradictions, and emits a per-policy ALIGNED/WARN/DRIFT verdict | Before merging a PR that touches a policy/constants module shared with a prompt file, or after any prompt rewrite |
+| [`git-identity-guard`](skills/git-identity-guard/SKILL.md) | Pre-push check that verifies the active git author email, authenticated gh CLI account, and target remote all match what you declared for this repo, and refuses to push on any mismatch | Working across a personal and a work GitHub account (or several client accounts) on the same machine |
+| [`safe-project-retirement`](skills/safe-project-retirement/SKILL.md) | Enumerates every surface tied to a dead project (repos, scheduled jobs, dashboards, notes), gets human confirmation, then archives everything reversibly with an undo manifest instead of deleting it | Cleaning up a finished or abandoned project without hunting down every cron job and dashboard entry by hand |
+| [`cross-repo-work-recap`](skills/cross-repo-work-recap/SKILL.md) | Pulls a structured, evidence-backed recap (shipped / in-flight / at-risk) of work across multiple local git repos over a time window, cross-referenced with personal notes | Answering "what did you actually get done this week" across several repos without reconstructing it from memory |
+| [`agent-observability-bundle`](skills/agent-observability-bundle/SKILL.md) | Builds a fully-local, zero-cost observability bundle for an AI coding agent — a status line, a hallucination-blocking turn-end hook, and an optional periodic quality grader | Getting visibility into context usage, cost, and unverified "done" claims from your AI coding agent without a paid monitoring service |
+| [`text-to-image-bakeoff`](skills/text-to-image-bakeoff/SKILL.md) | Wraps OpenAI gpt-image-1, Fal's Flux Pro, and Google Imagen text-to-image APIs behind one small script with a bake-off comparison mode, backend health tracking, and a reusable prompt template | Generating hero art or concept backdrops when no image-generation MCP/tool is available, or comparing providers before picking a default |
+| [`evidence-gated-delegation`](skills/evidence-gated-delegation/SKILL.md) | Before letting a secondary agent, worker fleet, or automation pipeline act on your behalf, requires a proven track record plus deterministic post-hoc verification — never trusts the delegate's own self-report | Wiring up a second agent or automation pipeline that will act without your eyes on every step |
+| [`legitimate-work-reroute`](skills/legitimate-work-reroute/SKILL.md) | Recovers full-quality output when a safety classifier misreads legitimate, authorized defensive-security work as an attack because of how the request is worded, without ever evading a genuine restriction | An authorized defensive-security task comes back visibly weaker or refused because it was worded in attack-shaped language |
+| [`environment-drift-hunter`](skills/environment-drift-hunter/SKILL.md) | Runs a scheduled and on-demand battery of deterministic, no-LLM checks over a local dev/automation setup and surfaces a ranked, evidence-backed finding list with an autofix-safe flag | Catching doc-vs-code drift, orphan jobs, security-default drift, and committed secrets before they turn into a real incident |
+
+## Week of 2026-07-12
 
 | Skill | What it does | Use it for |
 |---|---|---|

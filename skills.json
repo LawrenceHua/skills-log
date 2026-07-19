@@ -1,6 +1,82 @@
 {
-  "updated": "2026-07-12",
+  "updated": "2026-07-19",
   "weeks": [
+    {
+      "week": "2026-W30",
+      "date": "2026-07-19",
+      "skills": [
+        {
+          "name": "architecture-invariant-audit",
+          "slug": "architecture-invariant-audit",
+          "description": "A read-only, dependency-free script that checks a layered codebase against documented architecture rules (layer crossings, legacy reuse, anti-pattern regressions, doc drift) and fails CI when they're violated.",
+          "useFor": "Enforcing a layered architecture boundary, tracking a strangler-pattern legacy file's shrink, or catching a previously-fixed anti-pattern before it regresses elsewhere.",
+          "path": "skills/architecture-invariant-audit"
+        },
+        {
+          "name": "policy-prompt-drift-check",
+          "slug": "policy-prompt-drift-check",
+          "description": "Compares a code-level policy module against the natural-language prompt it governs, flags missing anchors and direct ALLOW/FORBID contradictions, and emits a per-policy ALIGNED/WARN/DRIFT verdict without editing anything.",
+          "useFor": "Before merging a PR that touches a policy/constants module shared with a prompt file, or after any prompt rewrite.",
+          "path": "skills/policy-prompt-drift-check"
+        },
+        {
+          "name": "git-identity-guard",
+          "slug": "git-identity-guard",
+          "description": "Pre-push check that verifies the active git author email, authenticated gh CLI account, and target remote all match what you declared for this repo, and refuses to push on any mismatch or missing declaration.",
+          "useFor": "Working across a personal and a work GitHub account (or several client accounts) on the same machine.",
+          "path": "skills/git-identity-guard"
+        },
+        {
+          "name": "safe-project-retirement",
+          "slug": "safe-project-retirement",
+          "description": "Enumerate every surface tied to a dead project (repos, scheduled jobs, dashboards, notes), get human confirmation, then archive everything reversibly with an undo manifest instead of deleting it.",
+          "useFor": "Cleaning up a finished or abandoned project without hunting down every cron job and dashboard entry by hand.",
+          "path": "skills/safe-project-retirement"
+        },
+        {
+          "name": "cross-repo-work-recap",
+          "slug": "cross-repo-work-recap",
+          "description": "Pull a structured, evidence-backed recap (shipped / in-flight / at-risk) of work across multiple local git repos over a time window, cross-referenced with personal notes.",
+          "useFor": "Answering 'what did you actually get done this week' across several repos without reconstructing it from memory.",
+          "path": "skills/cross-repo-work-recap"
+        },
+        {
+          "name": "agent-observability-bundle",
+          "slug": "agent-observability-bundle",
+          "description": "Build a fully-local, zero-cost observability bundle for an AI coding agent — a status line, a hallucination-blocking turn-end hook, and an optional periodic quality grader.",
+          "useFor": "Getting visibility into context usage, cost, and unverified 'done' claims from your AI coding agent without a paid monitoring service.",
+          "path": "skills/agent-observability-bundle"
+        },
+        {
+          "name": "text-to-image-bakeoff",
+          "slug": "text-to-image-bakeoff",
+          "description": "Wraps OpenAI gpt-image-1, Fal's Flux Pro, and Google Imagen text-to-image APIs behind one small script with a bake-off comparison mode, backend health tracking, and a reusable prompt template.",
+          "useFor": "Generating hero art or concept backdrops when no image-generation MCP/tool is available, or comparing providers before picking a default.",
+          "path": "skills/text-to-image-bakeoff"
+        },
+        {
+          "name": "evidence-gated-delegation",
+          "slug": "evidence-gated-delegation",
+          "description": "Before letting a secondary agent, worker fleet, or automation pipeline act on your behalf, require a proven track record plus deterministic post-hoc verification — never trust the delegate's own self-report of success.",
+          "useFor": "Wiring up a second agent or automation pipeline that will act without your eyes on every step.",
+          "path": "skills/evidence-gated-delegation"
+        },
+        {
+          "name": "legitimate-work-reroute",
+          "slug": "legitimate-work-reroute",
+          "description": "Recover full-quality output when a safety classifier misreads legitimate, authorized defensive-security work as an attack because of how the request is worded, without ever using this to evade a genuine restriction.",
+          "useFor": "An authorized defensive-security task comes back visibly weaker or refused because it was worded in attack-shaped language.",
+          "path": "skills/legitimate-work-reroute"
+        },
+        {
+          "name": "environment-drift-hunter",
+          "slug": "environment-drift-hunter",
+          "description": "Runs a scheduled and on-demand battery of deterministic, no-LLM checks over a local dev/automation setup and surfaces a ranked, evidence-backed finding list with concrete fixes and an autofix-safe flag.",
+          "useFor": "Catching doc-vs-code drift, orphan jobs, security-default drift, and committed secrets before they turn into a real incident.",
+          "path": "skills/environment-drift-hunter"
+        }
+      ]
+    },
     {
       "week": "2026-W29",
       "date": "2026-07-12",
