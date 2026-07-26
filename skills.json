@@ -1,6 +1,33 @@
 {
-  "updated": "2026-07-19",
+  "updated": "2026-07-26",
   "weeks": [
+    {
+      "week": "2026-W31",
+      "date": "2026-07-26",
+      "skills": [
+        {
+          "name": "chat-platform-agent-bridge",
+          "slug": "chat-platform-agent-bridge",
+          "description": "Wire an external chat platform (Telegram, Discord, SMS, etc.) into an AI agent so you can send it a prompt from your phone and get the reply back in the same chat, with untrusted-input quarantining and sender allow-listing built in.",
+          "useFor": "Sending your agent a prompt from your phone while away from your desk, or building a lightweight remote control for an unattended agent without exposing a web endpoint.",
+          "path": "skills/chat-platform-agent-bridge"
+        },
+        {
+          "name": "production-quality-autopatch-loop",
+          "slug": "production-quality-autopatch-loop",
+          "description": "Continuously score live production conversation/interaction transcripts against a quality rubric, auto-draft a minimal prompt-only fix as a pull request, and auto-merge it only once it clears a strict multi-reviewer safety gate.",
+          "useFor": "A deployed conversational or text-generating product where you want quality regressions caught from real traffic and small prompt fixes shipped automatically, never auto-merging an unreviewed or oversized change.",
+          "path": "skills/production-quality-autopatch-loop"
+        },
+        {
+          "name": "agent-burst-resource-prep",
+          "slug": "agent-burst-resource-prep",
+          "description": "A pre-flight routine that frees RAM and drops memory pressure on your machine so it can safely run a larger batch of parallel AI-agent sessions than usual, then restores normal state afterward.",
+          "useFor": "Right before spawning a larger-than-normal parallel AI-agent fan-out, or after noticing a big parallel run swapping/thrashing instead of speeding up.",
+          "path": "skills/agent-burst-resource-prep"
+        }
+      ]
+    },
     {
       "week": "2026-W30",
       "date": "2026-07-19",

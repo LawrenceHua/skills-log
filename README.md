@@ -38,7 +38,17 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
-## This week's 10 skills (2026-W30)
+## This week's 3 skills (2026-W31)
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`chat-platform-agent-bridge`](skills/chat-platform-agent-bridge/SKILL.md) | Wires an external chat platform (Telegram, Discord, SMS, etc.) into an AI agent so you can send it a prompt from your phone and get the reply back in the same chat, with untrusted-input quarantining and sender allow-listing built in | Sending your agent a prompt from your phone while away from your desk, or building a lightweight remote control for an unattended agent without exposing a web endpoint |
+| [`production-quality-autopatch-loop`](skills/production-quality-autopatch-loop/SKILL.md) | Continuously scores live production conversation/interaction transcripts against a quality rubric, auto-drafts a minimal prompt-only fix as a pull request, and auto-merges it only once it clears a strict multi-reviewer safety gate | A deployed conversational or text-generating product where you want quality regressions caught from real traffic and small prompt fixes shipped automatically, never auto-merging an unreviewed or oversized change |
+| [`agent-burst-resource-prep`](skills/agent-burst-resource-prep/SKILL.md) | A pre-flight routine that frees RAM and drops memory pressure on your machine so it can safely run a larger batch of parallel AI-agent sessions than usual, then restores normal state afterward | Right before spawning a larger-than-normal parallel AI-agent fan-out, or after noticing a big parallel run swapping/thrashing instead of speeding up |
+
+This week's batch was intentionally short — most of what was newly modified in the source skill collection this cycle either duplicated a method already published in an earlier week, or was too tightly coupled to private/internal infrastructure to responsibly generalize. Better a short honest batch than padding with weak entries.
+
+## Week of 2026-07-19
 
 | Skill | What it does | Use it for |
 |---|---|---|
