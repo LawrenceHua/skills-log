@@ -38,6 +38,33 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## Special release — The Stack (2026-08-10)
+
+A one-time distillation of two years of daily AI-tooling use (IDE assistants →
+a home-grown multi-agent orchestration platform → CLI agents → a multi-CLI,
+multi-model estate) into three things:
+
+- **[`THE-STACK.md`](THE-STACK.md)** — the full write-up: what each era taught,
+  the discipline layer, the skills worth installing in order, the twelve
+  background agents that should always be running, and how to compose multiple
+  CLIs and models.
+- **[`agents/`](agents/)** — five drop-in, read-only subagent definitions (the
+  "verifier bench"): adversarial-verifier, hostile-reviewer,
+  completeness-critic, cheap-grader, researcher.
+- **Eight new skills** filling gaps the earlier batches assumed but never
+  covered:
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`verification-labels`](skills/verification-labels/SKILL.md) | A four-label vocabulary (VERIFIED / CODE-SHIPPED-NOT-VERIFIED / BLOCKED / INCONCLUSIVE) every agent completion claim must carry, each backed by the exact probe that justifies it | Making "done" impossible to fake in agent status reports, and turning "are you sure?" arguments into evidence lookups |
+| [`compaction-contract`](skills/compaction-contract/SKILL.md) | A fixed five-section session-summary template that quotes exact paths/errors/flags instead of paraphrasing them | Long agentic sessions that get compacted or handed off, so the next session resumes without re-deriving state |
+| [`adversarial-planning`](skills/adversarial-planning/SKILL.md) | Deep planning for non-trivial changes: parallel research agents, competing designs, then a mandatory attack pass before any implementation | Features, refactors, migrations, and anything you'll hand to an autonomous agent to execute unattended |
+| [`model-lane-routing`](skills/model-lane-routing/SKILL.md) | Stable role→model-tier lanes (strongest plans/verifies, cheaper executes, a different vendor judges) that survive model-generation churn, with live-pricing re-verification | Designing multi-model pipelines and monthly cost reviews |
+| [`fanout-cost-pinning`](skills/fanout-cost-pinning/SKILL.md) | Pins every spawned subagent to the cheapest adequate model, closing the silent-inheritance leak where parallel readers run on your apex-priced main model | Anything that fans out parallel subagents, and investigating a surprising AI bill |
+| [`multi-cli-constitution`](skills/multi-cli-constitution/SKILL.md) | One shared rules file + capability routing table + compiled policy block that keeps several AI CLIs behaviorally identical | The day you add a second AI coding CLI |
+| [`background-agent-roster`](skills/background-agent-roster/SKILL.md) | The twelve standing background agents worth running on any machine hosting unattended AI automation, plus the receipt-file discipline that keeps them honest | Growing a scheduled-automation estate without silent three-week outages |
+| [`agent-memory-sync`](skills/agent-memory-sync/SKILL.md) | Git-backed persistent agent memory — one fact per file, typed frontmatter, an always-loaded index, and a scheduled commit/rebase/push sync | Making what an agent learned survive sessions, machines, and even switching agent tools |
+
 ## This week's 3 skills (2026-W31)
 
 | Skill | What it does | Use it for |

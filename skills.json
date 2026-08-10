@@ -1,6 +1,70 @@
 {
-  "updated": "2026-07-26",
+  "updated": "2026-08-10",
   "weeks": [
+    {
+      "week": "2026-W33",
+      "date": "2026-08-10",
+      "note": "Special release: THE-STACK.md (two-year distillation), the agents/ verifier bench, and eight gap-filling skills.",
+      "skills": [
+        {
+          "name": "verification-labels",
+          "slug": "verification-labels",
+          "description": "A four-label vocabulary (VERIFIED, CODE-SHIPPED-NOT-VERIFIED, BLOCKED, INCONCLUSIVE) that every completion claim from an AI agent must carry, each backed by the exact command or probe that justifies it.",
+          "useFor": "Making 'done' impossible to fake in agent status reports, and turning 'are you sure?' arguments into evidence lookups.",
+          "path": "skills/verification-labels"
+        },
+        {
+          "name": "compaction-contract",
+          "slug": "compaction-contract",
+          "description": "A fixed five-section template for summarizing long AI-agent sessions that quotes exact strings (paths, errors, flags) instead of paraphrasing them.",
+          "useFor": "Long agentic sessions that get compacted or handed off, so the next session resumes without re-deriving state.",
+          "path": "skills/compaction-contract"
+        },
+        {
+          "name": "adversarial-planning",
+          "slug": "adversarial-planning",
+          "description": "A deep-planning protocol: parallel research agents map current state and blast radius, competing designs are drafted, then a mandatory adversarial pass attacks the plan before any implementation.",
+          "useFor": "Non-trivial features, refactors, migrations, and anything handed to an autonomous agent to execute unattended.",
+          "path": "skills/adversarial-planning"
+        },
+        {
+          "name": "model-lane-routing",
+          "slug": "model-lane-routing",
+          "description": "Stable role-to-model-tier lanes — the strongest model plans and verifies, a cheaper capable model executes, a different-vendor long-context model judges — with live-pricing re-verification before cost-based decisions.",
+          "useFor": "Designing multi-model pipelines, monthly cost reviews, and re-mapping lanes when a new model generation ships.",
+          "path": "skills/model-lane-routing"
+        },
+        {
+          "name": "fanout-cost-pinning",
+          "slug": "fanout-cost-pinning",
+          "description": "Explicitly pin every spawned subagent to the cheapest adequate model tier, closing the silent-inheritance leak where parallel readers run on the apex-priced main-loop model.",
+          "useFor": "Anything that fans out parallel subagents, and investigating a surprising AI bill.",
+          "path": "skills/fanout-cost-pinning"
+        },
+        {
+          "name": "multi-cli-constitution",
+          "slug": "multi-cli-constitution",
+          "description": "Keep multiple AI coding CLIs behaviorally consistent with one shared constitution file, a capability routing table with polyfill recipes, and a compiled policy block injected identically into each tool's config.",
+          "useFor": "The day you add a second AI coding CLI, or after two tools behave differently on the same rule.",
+          "path": "skills/multi-cli-constitution"
+        },
+        {
+          "name": "background-agent-roster",
+          "slug": "background-agent-roster",
+          "description": "The twelve standing background agents worth running on any machine hosting unattended AI automation, plus the receipt-file and whitelisted-autofix discipline that keeps the roster honest.",
+          "useFor": "Growing a scheduled-automation estate without silent multi-week outages.",
+          "path": "skills/background-agent-roster"
+        },
+        {
+          "name": "agent-memory-sync",
+          "slug": "agent-memory-sync",
+          "description": "A git-backed persistent memory layout for AI agents — one fact per file with typed frontmatter, an always-loaded index, and a scheduled commit/rebase/push sync job.",
+          "useFor": "Making what an agent learned survive session boundaries, machine switches, and agent-tool switches.",
+          "path": "skills/agent-memory-sync"
+        }
+      ],
+      "special": true
+    },
     {
       "week": "2026-W31",
       "date": "2026-07-26",
