@@ -1,7 +1,7 @@
 # The Stack — two years of AI-agent tooling, distilled
 
 I've been building with AI tools daily since 2024: IDE assistants first (Cursor),
-then a home-grown multi-agent orchestration platform (OpenClaw), then CLI agents
+then a home-grown multi-agent orchestration platform, then CLI agents
 (Claude Code on a Max subscription), then a second execution CLI (Codex), a
 long-context CLI (Kimi), and finally a self-hosted local agent runner (PairChat).
 Along the way I accumulated ~300 scheduled jobs, 100+ skills, and a lot of scar
