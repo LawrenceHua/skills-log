@@ -38,6 +38,18 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## This week's 7 skills (2026-W36)
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`observable-share`](skills/observable-share/SKILL.md) | Before anything gets shared outward, requires three written answers (what's the one thing this says, what live source backs every number, what watches it and fixes it when it breaks), plus a hard word budget and a "stale must look stale" rule | Any report, dashboard, or status post with numbers in it, especially catching staleness that looks healthy |
+| [`overnight-product-factory`](skills/overnight-product-factory/SKILL.md) | An unattended build-and-deploy pipeline that only ships on a hard gate — a unique canary token must round-trip through both the QA probe and the live health probe, and a failed deploy triggers an independently-verified rollback | Handing a defined product idea to an agent overnight and getting back a trustworthy SHIPPED/BUILT/STOPPED_AT_GATE report instead of an unverified "done" claim |
+| [`second-machine-offload`](skills/second-machine-offload/SKILL.md) | Turns a second machine you own into a safe batch worker for CPU-bound jobs — a health check, a secrets-excluding file sync, and a single round-trip command with a verifiable receipt | Offloading compiles, transcodes, test sweeps, or bulk data jobs off your primary machine without ever putting its credentials on the second one |
+| [`ci-triage`](skills/ci-triage/SKILL.md) | Triages every red CI run across your repos by classifying each failure's root signature — infrastructure "never started" vs. a genuine "step failed" — so a rerun is only attempted on the classes it can actually fix | Stopping a billing outage or runner regression from being misdiagnosed as a wave of unrelated flaky tests |
+| [`deletion-safety-gate`](skills/deletion-safety-gate/SKILL.md) | Before deleting a worktree, clone, or cache, runs a fail-closed reference check across scheduled jobs, config files, running processes, and shared git object stores — SAFE only if every screen completes and finds zero references | Any bulk cleanup or "reclaim disk space" pass, so you never delete a directory a scheduled job is still executing out of |
+| [`gate-erosion-audit`](skills/gate-erosion-audit/SKILL.md) | Audits an existing safety gate or verifier for five specific ways enforcement silently stops working — fail-open on error, opt-in-by-default, self-supplied evidence, a single unenforced entry point, and asymmetric normalization | Reviewing a gate you're about to trust more, or after a "the gate should have caught this" incident |
+| [`skill-suite-router`](skills/skill-suite-router/SKILL.md) | Once a personal AI-agent skill library grows past a few dozen entries, groups related skills behind thin "suite" router skills that only route, so the top-level skill list stays short and trigger phrases stop colliding | A skill/command library that's gotten long enough that two skills compete for the same trigger phrasing |
+
 ## Special release — The Stack (2026-08-10)
 
 A one-time distillation of two years of daily AI-tooling use (IDE assistants →
