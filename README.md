@@ -38,6 +38,16 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## Manual catch-up — 2026-09-09
+
+This three-skill batch follows a review that widened the read-only source inventory. It is a separately reviewed manual catch-up, not a replacement for the recorded automated daily attempt for this date.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`terminal-ui-quality-guardrail`](skills/terminal-ui-quality-guardrail/SKILL.md) | Reviews terminal and text-interface changes for hierarchy, readable contrast, keyboard-visible state, and useful status information | Checking a terminal theme, status line, prompt, pane layout, or text interface after a visual change |
+| [`safe-cross-tool-configuration-transfer`](skills/safe-cross-tool-configuration-transfer/SKILL.md) | Transfers a useful workflow pattern between developer tools through safe inspection, native translation, and reversible verification | Adapting a rule, command, hook, skill, or integration without copying private configuration |
+| [`coherent-product-design-workflow`](skills/coherent-product-design-workflow/SKILL.md) | Grounds a product change in user jobs and real states, then compiles reusable interface rules and verifies the primary journey | Designing or redesigning a product surface whose states, components, accessibility, and visual rules must remain coherent |
+
 ## This week's 10 skills (2026-W37)
 
 | Skill | What it does | Use it for |
