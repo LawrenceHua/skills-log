@@ -118,6 +118,56 @@ class PublishWeeklyFeedTests(unittest.TestCase):
         with self.assertRaisesRegex(publisher.FeedError, "newer"):
             publisher.publish_feed(self.root, date(2026, 8, 30), today=date(2026, 9, 20))
 
+    def test_malformed_or_non_string_descriptions_cannot_enter_feed(self) -> None:
+        self.add_skill("new-source")
+        source = self.root / "skills" / "new-source" / "SKILL.md"
+        before = (self.root / "skills.json").read_bytes()
+        for description in (
+            '[unterminated', '"unterminated', "'unterminated", '"bad\\q escape"',
+            '"valid" trailing', '"\\ud800"', 'null', '~', 'true', 'yes', '123', '.5e3', '[one, two]',
+            '{key: value}', '>\n  Folded text.', 'Plain text: invalid YAML',
+        ):
+            with self.subTest(description=description):
+                source.write_text(
+                    f"---\nname: new-source\ndescription: {description}\n---\n## When to use\nUse it for work.\n",
+                    encoding="utf-8",
+                )
+                with self.assertRaises(publisher.FeedError):
+                    publisher.publish_feed(self.root, date(2026, 9, 13), write=True, today=date(2026, 9, 13))
+                self.assertEqual(before, (self.root / "skills.json").read_bytes())
+
+    def test_quoted_descriptions_are_decoded_without_losing_content(self) -> None:
+        self.add_skill("new-source")
+        source = self.root / "skills" / "new-source" / "SKILL.md"
+        for encoded, expected in (
+            ('"Use \\"quotes\\" and \\\\paths; \\u0061 works."', 'Use "quotes" and \\paths; a works.'),
+            ("'Use the author''s examples.'", "Use the author's examples."),
+            ('"null"', 'null'),
+            ('"Keep # text" # metadata comment', 'Keep # text'),
+            ('Use plain text. # metadata comment', 'Use plain text.'),
+        ):
+            with self.subTest(encoded=encoded):
+                source.write_text(
+                    f"---\nname: new-source\ndescription: {encoded}\n---\n## When to use\nUse it for work.\n",
+                    encoding="utf-8",
+                )
+                output, _ = publisher.publish_feed(self.root, date(2026, 9, 13), today=date(2026, 9, 13))
+                self.assertEqual(output["weeks"][0]["skills"][0]["description"], expected)
+
+    def test_duplicate_frontmatter_keys_are_rejected(self) -> None:
+        self.add_skill("new-source")
+        source = self.root / "skills" / "new-source" / "SKILL.md"
+        source.write_text(source.read_text().replace("---\n\n##", "description: Duplicate.\n---\n\n##"))
+        with self.assertRaisesRegex(publisher.FeedError, "duplicate frontmatter key"):
+            publisher.publish_feed(self.root, date(2026, 9, 13), today=date(2026, 9, 13))
+
+    def test_mapping_separator_requires_whitespace(self) -> None:
+        self.add_skill("new-source")
+        source = self.root / "skills" / "new-source" / "SKILL.md"
+        source.write_text(source.read_text().replace("name: new-source", "name:new-source"))
+        with self.assertRaisesRegex(publisher.FeedError, "malformed frontmatter line"):
+            publisher.publish_feed(self.root, date(2026, 9, 13), today=date(2026, 9, 13))
+
 
 if __name__ == "__main__":
     unittest.main()

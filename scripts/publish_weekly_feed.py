@@ -2,9 +2,9 @@
 """Publish a truthful weekly Skills Log batch from checked-in source files.
 
 The publisher has no model, network, or secret dependency.  A source skill is
-eligible only when it is a new ``skills/<slug>/SKILL.md`` directory with valid
-frontmatter and a ``## When to use`` section.  If there is no eligible source,
-the command fails instead of manufacturing a dated batch.
+eligible only when it is a new ``skills/<slug>/SKILL.md`` directory with
+supported string frontmatter and a ``## When to use`` section. If there is no
+eligible source, the command fails instead of manufacturing a dated batch.
 """
 
 from __future__ import annotations
@@ -22,10 +22,57 @@ MAX_BATCH_SIZE = 10
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 HEADING_RE = re.compile(r"(?m)^##\s+When to use\s*$")
 NEXT_HEADING_RE = re.compile(r"(?m)^##\s+")
+NUMERIC_RE = re.compile(
+    r"[+-]?(?:0x[0-9a-f_]+|0o[0-7_]+|0b[01_]+|"
+    r"(?:[0-9][0-9_]*(?:\.[0-9_]*)?|\.[0-9_]+)(?:e[+-]?[0-9]+)?|"
+    r"[0-9][0-9_]*(?::[0-5]?[0-9])+(?:\.[0-9_]*)?|\.(?:inf|nan))",
+    re.IGNORECASE,
+)
 
 
 class FeedError(ValueError):
     """A source or feed invariant prevents a safe publication."""
+
+
+def _scalar(value: str, path: Path) -> str:
+    """Read a single-line YAML string subset, rejecting other YAML types.
+
+    Double quotes use JSON escapes; single quotes escape an apostrophe as ''.
+    Plain strings may have whitespace-separated comments. Multiline values,
+    tags, anchors, collections, and implicit non-string scalars are unsupported.
+    """
+    value = value.strip()
+    if value.startswith('"'):
+        try:
+            decoded, end = json.JSONDecoder().raw_decode(value)
+        except json.JSONDecodeError as exc:
+            raise FeedError(f"{path}: malformed double-quoted frontmatter string") from exc
+        try:
+            decoded.encode("utf-8")
+        except UnicodeEncodeError as exc:
+            raise FeedError(f"{path}: invalid Unicode in frontmatter string") from exc
+        tail = value[end:]
+        if tail.strip() and not re.fullmatch(r"\s+#.*", tail):
+            raise FeedError(f"{path}: unexpected text after quoted frontmatter string")
+        return decoded
+    if value.startswith("'"):
+        match = re.fullmatch(r"'((?:[^']|'')*)'(\s+#.*|\s*)", value)
+        if not match:
+            raise FeedError(f"{path}: malformed single-quoted frontmatter string")
+        return match[1].replace("''", "'")
+
+    value = re.split(r"\s+#", value, maxsplit=1)[0].rstrip()
+    if (
+        not value
+        or value[0] in "[]{}&*!|>%@`#"
+        or re.match(r"[-?:](?:\s|$)", value)
+        or re.search(r":(?:\s|$)", value)
+        or value.lower() in {"null", "~", "true", "false", "yes", "no", "on", "off", "y", "n"}
+        or NUMERIC_RE.fullmatch(value)
+        or re.fullmatch(r"\d{4}-\d{2}-\d{2}(?:[Tt ].*)?", value)
+    ):
+        raise FeedError(f"{path}: unsupported frontmatter scalar; use a quoted string")
+    return value
 
 
 def _frontmatter(path: Path) -> tuple[dict[str, str], str]:
@@ -42,12 +89,16 @@ def _frontmatter(path: Path) -> tuple[dict[str, str], str]:
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         key, separator, value = line.partition(":")
-        if not separator:
+        if (
+            not separator
+            or line[0].isspace()
+            or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_-]*", key)
+            or (value and not value[0].isspace())
+        ):
             raise FeedError(f"{path}: malformed frontmatter line")
-        key = key.strip()
         if key in fields:
             raise FeedError(f"{path}: duplicate frontmatter key {key!r}")
-        fields[key] = value.strip().strip('"').strip("'")
+        fields[key] = _scalar(value, path)
     body = "\n".join(lines[end + 1 :])
     return fields, body
 

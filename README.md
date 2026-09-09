@@ -160,6 +160,10 @@ The `Weekly Skills Feed` workflow runs Sundays at 21:15 UTC and can also be
 started manually. It reads only checked-in `skills/<slug>/SKILL.md` files. A
 new source file must have `name` and `description` frontmatter plus a non-empty
 `## When to use` section; that section supplies the feed's `useFor` field.
+Frontmatter supports flat, single-line string fields: plain text, single quotes
+with doubled apostrophes, or double quotes with JSON escapes. Duplicate keys,
+malformed quotes, collections, nulls, booleans, numeric values, and multiline
+YAML are rejected. Quote descriptions containing `: ` or literal ` #` text.
 
 The publisher labels a Sunday batch with the following Monday's ISO week to
 match the existing feed convention. It appends only source directories not
