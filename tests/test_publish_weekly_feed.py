@@ -70,20 +70,39 @@ class PublishWeeklyFeedTests(unittest.TestCase):
             publisher.publish_feed(self.root, date(2026, 9, 20), today=date(2026, 9, 20))
         self.assertEqual(before, (self.root / "skills.json").read_text(encoding="utf-8"))
 
+    def test_legacy_sunday_batches_use_the_following_monday_iso_week(self) -> None:
+        self.assertEqual(publisher._week_id(date(2026, 9, 6)), "2026-W37")
+        self.assertEqual(publisher._week_id(date(2026, 7, 12)), "2026-W29")
+
     def test_unqualified_source_fails_instead_of_fabricating_use_for(self) -> None:
         self.add_skill("missing-use", when_to_use=None)
         with self.assertRaisesRegex(publisher.FeedError, "missing-use"):
             publisher.publish_feed(self.root, date(2026, 9, 20), today=date(2026, 9, 20))
 
-    def test_success_uses_source_and_is_idempotently_rejected(self) -> None:
+    def test_success_uses_source_and_same_date_rerun_is_unchanged(self) -> None:
         self.add_skill("real-new-skill")
-        output, slugs = publisher.publish_feed(self.root, date(2026, 9, 20), write=True, today=date(2026, 9, 20))
+        output, slugs = publisher.publish_feed(self.root, date(2026, 9, 13), write=True, today=date(2026, 9, 13))
         self.assertEqual(slugs, ["real-new-skill"])
-        self.assertEqual(output["updated"], "2026-09-20")
+        self.assertEqual(output["updated"], "2026-09-13")
         self.assertEqual(output["weeks"][0]["week"], "2026-W38")
         self.assertEqual(output["weeks"][0]["skills"][0]["useFor"], "Use it for new work.")
+        before = (self.root / "skills.json").read_text(encoding="utf-8")
+        rerun, rerun_slugs = publisher.publish_feed(self.root, date(2026, 9, 13), today=date(2026, 9, 13), write=True)
+        self.assertEqual(rerun_slugs, [])
+        self.assertEqual(rerun, output)
+        self.assertEqual(before, (self.root / "skills.json").read_text(encoding="utf-8"))
+
+    def test_same_date_rerun_is_unchanged_when_sources_are_already_published(self) -> None:
+        before = (self.root / "skills.json").read_text(encoding="utf-8")
+        output, slugs = publisher.publish_feed(self.root, date(2026, 9, 6), today=date(2026, 9, 6))
+        self.assertEqual(slugs, [])
+        self.assertEqual(output["updated"], "2026-09-06")
+        self.assertEqual(before, (self.root / "skills.json").read_text(encoding="utf-8"))
+
+    def test_same_date_with_new_source_remains_a_conflict(self) -> None:
+        self.add_skill("real-new-skill")
         with self.assertRaisesRegex(publisher.FeedError, "already published"):
-            publisher.publish_feed(self.root, date(2026, 9, 20), today=date(2026, 9, 20))
+            publisher.publish_feed(self.root, date(2026, 9, 6), today=date(2026, 9, 6))
 
     def test_duplicate_feed_slug_is_rejected(self) -> None:
         feed = json.loads((self.root / "skills.json").read_text(encoding="utf-8"))

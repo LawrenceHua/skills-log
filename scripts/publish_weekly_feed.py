@@ -116,8 +116,27 @@ def _validate_feed(feed: Any) -> tuple[list[dict[str, Any]], set[str]]:
 
 
 def _week_id(publication_date: dt.date) -> str:
-    iso = publication_date.isocalendar()
+    # The historical feed labels a Sunday batch with the ISO week beginning
+    # the following Monday (for example, 2026-09-06 is 2026-W37).
+    iso = (publication_date + dt.timedelta(days=1)).isocalendar()
     return f"{iso.year:04d}-W{iso.week:02d}"
+
+
+def _candidates(root: Path, published: set[str]) -> tuple[list[dict[str, str]], list[str]]:
+    candidates: list[dict[str, str]] = []
+    ineligible: list[str] = []
+    skills_dir = root / "skills"
+    for source_dir in sorted(skills_dir.iterdir()):
+        if not source_dir.is_dir() or source_dir.name.startswith("."):
+            continue
+        source_path = source_dir / "SKILL.md"
+        if not source_path.exists() or source_dir.name in published:
+            continue
+        try:
+            candidates.append(_source_skill(source_path, source_dir.name))
+        except FeedError as exc:
+            ineligible.append(str(exc))
+    return candidates, ineligible
 
 
 def publish_feed(
@@ -140,34 +159,24 @@ def publish_feed(
     except (OSError, json.JSONDecodeError) as exc:
         raise FeedError(f"cannot read {feed_path}") from exc
     weeks, published = _validate_feed(feed)
-    if any(week.get("week") == _week_id(publication_date) for week in weeks):
-        raise FeedError(f"week {_week_id(publication_date)} is already published")
+    week_id = _week_id(publication_date)
+    candidates, ineligible = _candidates(root, published)
+    if ineligible:
+        raise FeedError("Unpublished source skills are ineligible: " + "; ".join(ineligible))
+    matching_week = next((week for week in weeks if week.get("week") == week_id), None)
+    if matching_week:
+        if matching_week.get("date") == publication_date.isoformat() and not candidates:
+            return feed, []
+        raise FeedError(f"week {week_id} is already published")
     existing_dates = [dt.date.fromisoformat(week["date"]) for week in weeks]
     if existing_dates and publication_date <= max(existing_dates):
         raise FeedError("publication date must be newer than the latest feed date")
-
-    candidates: list[dict[str, str]] = []
-    ineligible: list[str] = []
-    skills_dir = root / "skills"
-    for source_dir in sorted(skills_dir.iterdir()):
-        if not source_dir.is_dir() or source_dir.name.startswith("."):
-            continue
-        source_path = source_dir / "SKILL.md"
-        if not source_path.exists() or source_dir.name in published:
-            continue
-        try:
-            candidates.append(_source_skill(source_path, source_dir.name))
-        except FeedError as exc:
-            ineligible.append(str(exc))
-
-    if ineligible:
-        raise FeedError("Unpublished source skills are ineligible: " + "; ".join(ineligible))
     if not candidates:
         raise FeedError("No unpublished eligible skills; refusing to fabricate a weekly batch.")
     if len(candidates) > limit:
         raise FeedError(f"{len(candidates)} unpublished skills exceed the batch limit of {limit}; curate first")
 
-    new_week = {"week": _week_id(publication_date), "date": publication_date.isoformat(), "skills": candidates}
+    new_week = {"week": week_id, "date": publication_date.isoformat(), "skills": candidates}
     output = {**feed, "updated": publication_date.isoformat(), "weeks": [new_week, *weeks]}
     if write:
         feed_path.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
