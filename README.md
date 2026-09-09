@@ -154,6 +154,19 @@ structured format (`{ updated, weeks: [{ week, date, skills: [{ name, slug,
 description, useFor, path }] }] }`), if you want to build tooling on top of
 this feed instead of reading the table by hand.
 
+## Weekly publication
+
+The `Weekly Skills Feed` workflow runs Sundays at 21:15 UTC and can also be
+started manually. It reads only checked-in `skills/<slug>/SKILL.md` files. A
+new source file must have `name` and `description` frontmatter plus a non-empty
+`## When to use` section; that section supplies the feed's `useFor` field.
+
+The publisher appends only source directories not already present in
+`skills.json`, keeps the source description intact, and rejects duplicate,
+backdated, future, or over-sized batches. If no eligible source exists, it
+fails instead of inventing a weekly entry. Add and review real source skills
+before the next scheduled run.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

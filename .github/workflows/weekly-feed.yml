@@ -1,0 +1,54 @@
+name: Weekly Skills Feed
+
+on:
+  schedule:
+    # Sunday 21:15 UTC; the publisher derives the ISO week from this date.
+    - cron: "15 21 * * 0"
+  workflow_dispatch:
+    inputs:
+      publication_date:
+        description: "Sunday publication date (YYYY-MM-DD); defaults to today in UTC"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate publisher
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Publish source-backed weekly feed
+        env:
+          INPUT_PUBLICATION_DATE: ${{ inputs.publication_date }}
+        run: |
+          set -euo pipefail
+          publication_date="$INPUT_PUBLICATION_DATE"
+          if [ -z "$publication_date" ]; then
+            publication_date="$(date -u +%F)"
+          fi
+          python3 scripts/publish_weekly_feed.py --date "$publication_date" --write
+
+      - name: Commit the published batch
+        env:
+          INPUT_PUBLICATION_DATE: ${{ inputs.publication_date }}
+        run: |
+          set -euo pipefail
+          publication_date="$INPUT_PUBLICATION_DATE"
+          if [ -z "$publication_date" ]; then
+            publication_date="$(date -u +%F)"
+          fi
+          if git diff --quiet -- skills.json; then
+            echo "No feed change to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add skills.json
+          git commit -m "Week ${publication_date}: weekly skills batch"
+          git push
