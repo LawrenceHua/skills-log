@@ -38,9 +38,9 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
-## Manual catch-up — 2026-09-09
+## September 9: design and workflow skills
 
-This three-skill batch follows a review that widened the read-only source inventory. It is a separately reviewed manual catch-up, not a replacement for the recorded automated daily attempt for this date.
+Three practical methods for making terminal interfaces clearer, transferring tool workflows safely, and keeping product design coherent from user journey through verification.
 
 | Skill | What it does | Use it for |
 |---|---|---|

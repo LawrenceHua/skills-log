@@ -5,7 +5,23 @@ description: Review terminal and text-interface changes for clear hierarchy, rea
 
 # Terminal UI Quality Guardrail
 
+## When to use
+
 Use this after changing a terminal theme, prompt, status line, title, pane layout, or text-based interface. The purpose is to make an interface legible under pressure, including when color or mouse input is unavailable.
+
+## How to use
+
+Install the skill for personal use or one project:
+
+```bash
+cp -R skills/terminal-ui-quality-guardrail ~/.claude/skills/
+# or: cp -R skills/terminal-ui-quality-guardrail <project>/.claude/skills/
+```
+
+Then ask your assistant, for example:
+
+- `Review this terminal status line for hierarchy, contrast, and keyboard-visible states.`
+- `Use terminal-ui-quality-guardrail after this prompt and theme change; list the states I still need to inspect.`
 
 ## Start with the task, not decoration
 

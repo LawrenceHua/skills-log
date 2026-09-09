@@ -5,7 +5,23 @@ description: Turn a product change into a coherent interface by defining the use
 
 # Coherent Product Design Workflow
 
+## When to use
+
 Use this for a new interface, a major screen redesign, or a product surface that has grown inconsistent. Start from the user's job and observable behavior; visual style follows from the contract.
+
+## How to use
+
+Install the skill for personal use or one project:
+
+```bash
+cp -R skills/coherent-product-design-workflow ~/.claude/skills/
+# or: cp -R skills/coherent-product-design-workflow <project>/.claude/skills/
+```
+
+Then ask your assistant, for example:
+
+- `Use coherent-product-design-workflow to define the primary journey and states for this settings redesign.`
+- `Audit this interface for component and state inconsistencies, then give me the smallest complete vertical slice to build.`
 
 ## Ground the work
 

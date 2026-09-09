@@ -5,7 +5,23 @@ description: Transfer a useful workflow pattern between developer tools by inspe
 
 # Safe Cross-Tool Configuration Transfer
 
+## When to use
+
 Use this when one development tool has a workflow worth adapting in another: a rule, command, hook, skill, integration, or continuity format. Transfer the underlying intent, not a file wholesale.
+
+## How to use
+
+Install the skill for personal use or one project:
+
+```bash
+cp -R skills/safe-cross-tool-configuration-transfer ~/.claude/skills/
+# or: cp -R skills/safe-cross-tool-configuration-transfer <project>/.claude/skills/
+```
+
+Then ask your assistant, for example:
+
+- `Compare this source-tool workflow with my target tool and propose the smallest native equivalent.`
+- `Use safe-cross-tool-configuration-transfer to adapt this hook without reading credentials or copying private paths.`
 
 ## Establish the boundary
 

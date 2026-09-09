@@ -4,7 +4,6 @@
     {
       "week": "2026-W37",
       "date": "2026-09-09",
-      "note": "Manual catch-up after a source-coverage correction; this is separate from the recorded automated daily attempt for the same date.",
       "skills": [
         {
           "name": "terminal-ui-quality-guardrail",
