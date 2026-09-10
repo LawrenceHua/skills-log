@@ -1,6 +1,68 @@
 {
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "weeks": [
+    {
+      "week": "2026-W37",
+      "date": "2026-09-10",
+      "skills": [
+        {
+          "name": "production-promotion",
+          "slug": "production-promotion",
+          "description": "Merge and verify an exact-SHA delivery candidate all the way into production \u2014 binding the merge commit, the deployed production SHA, and a live probe together \u2014 instead of treating a successful merge as a successful release.",
+          "useFor": "Promoting an already-verified PR into production and proving the live site is actually serving that exact commit, not just that the merge button worked.",
+          "path": "skills/production-promotion"
+        },
+        {
+          "name": "headless-agent-launch-verification",
+          "slug": "headless-agent-launch-verification",
+          "description": "Launch a headless/background CLI coding-agent run so it can't silently hang or lie about completing, and verify what it actually did instead of trusting its self-report.",
+          "useFor": "Delegating substantial work to a background CLI coding agent, and debugging a run that came back suspiciously empty.",
+          "path": "skills/headless-agent-launch-verification"
+        },
+        {
+          "name": "sandboxed-cli-worker-controller",
+          "slug": "sandboxed-cli-worker-controller",
+          "description": "Run other AI coding CLIs as least-privilege, evidence-producing workers under one controller \u2014 stripped credentials and config, pinned binaries, content-free immutable receipts, and safe process-group cancellation.",
+          "useFor": "Getting an independent second CLI agent's review or fan-out work without handing it full local permissions, credentials, or config.",
+          "path": "skills/sandboxed-cli-worker-controller"
+        },
+        {
+          "name": "code-graph-blast-radius",
+          "slug": "code-graph-blast-radius",
+          "description": "Before editing a shared symbol, class, file, or module, query a code-dependency-graph tool for its actual upstream callers instead of relying on grep alone, then compare what you actually changed against the predicted blast radius afterward.",
+          "useFor": "Refactors, renames, or edits to shared utilities where you need to know what could break before you touch it.",
+          "path": "skills/code-graph-blast-radius"
+        },
+        {
+          "name": "delegation-brief-contract",
+          "slug": "delegation-brief-contract",
+          "description": "A fixed structure for the handoff brief when an orchestrating loop delegates implementation work to an agent \u2014 the mechanism, an exclusive working path, hard prohibitions, exact gates, the proof standard, the stop line, and the report format.",
+          "useFor": "Writing a delegation brief that doesn't turn into rework, and verifying what a delegated agent reports back.",
+          "path": "skills/delegation-brief-contract"
+        },
+        {
+          "name": "backup-recoverability-canary",
+          "slug": "backup-recoverability-canary",
+          "description": "Before treating an encrypted off-site backup as grounds to delete local originals, prove round-trip recoverability with a synthetic canary and independently escrow the recovery key \u2014 instead of trusting 'upload succeeded.'",
+          "useFor": "Deleting local originals after backing them up to an encrypted remote, and periodically re-checking an existing backup's recoverability.",
+          "path": "skills/backup-recoverability-canary"
+        },
+        {
+          "name": "interface-quality-gate",
+          "slug": "interface-quality-gate",
+          "description": "A mechanical-plus-visual quality gate for any UI \u2014 an AI-tells lint pass, multi-viewport screenshot checks for overlap/clipping/responsive states, and a frontend-standards checklist \u2014 run before calling an interface done.",
+          "useFor": "Reviewing any generated or edited web page, app screen, dashboard, or mobile layout for AI-slop and responsive-state defects.",
+          "path": "skills/interface-quality-gate"
+        },
+        {
+          "name": "agent-prompt-architecture",
+          "slug": "agent-prompt-architecture",
+          "description": "A repeatable method for designing and auditing an AI agent's system prompt, always-loaded rules file, tool-use guidance, and memory/compaction instructions \u2014 identify the surface, define one behavior target, remove obsolete scaffolding, verify with the smallest probe.",
+          "useFor": "Improving a system prompt or rules file that isn't producing the behavior you want, or auditing one for bloat and contradictions before adding to it.",
+          "path": "skills/agent-prompt-architecture"
+        }
+      ]
+    },
     {
       "week": "2026-W37",
       "date": "2026-09-09",
@@ -484,6 +546,11 @@
       "date": "2026-09-09",
       "week": "2026-W37",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-09-10",
+      "week": "2026-W37",
+      "outcome": "qualified-delta"
     }
   ]
 }

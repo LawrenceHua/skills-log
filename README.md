@@ -38,6 +38,21 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 10: delivery, delegation, and interface-quality skills
+
+Eight practical methods spanning post-merge production verification, safely delegating to and sandboxing other AI CLIs, code-graph-aware editing, a reusable delegation-brief structure, backup recoverability proof, UI quality gating, and system-prompt architecture.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`production-promotion`](skills/production-promotion/SKILL.md) | Merges and verifies an exact-SHA delivery candidate all the way into production — binding the merge commit, the deployed production SHA, and a live probe together | Promoting an already-verified PR into production and proving the live site is actually serving that exact commit |
+| [`headless-agent-launch-verification`](skills/headless-agent-launch-verification/SKILL.md) | Launches a headless/background CLI coding-agent run so it can't silently hang or lie about completing, and verifies what it actually did | Delegating substantial work to a background CLI coding agent, and debugging a run that came back suspiciously empty |
+| [`sandboxed-cli-worker-controller`](skills/sandboxed-cli-worker-controller/SKILL.md) | Runs other AI coding CLIs as least-privilege, evidence-producing workers under one controller — stripped credentials/config, pinned binaries, content-free immutable receipts, safe cancellation | Getting an independent second CLI agent's review or fan-out work without handing it full local permissions or credentials |
+| [`code-graph-blast-radius`](skills/code-graph-blast-radius/SKILL.md) | Queries a code-dependency-graph tool for a shared symbol's actual upstream callers before editing it, instead of relying on grep alone | Refactors, renames, or edits to shared utilities where you need to know what could break before you touch it |
+| [`delegation-brief-contract`](skills/delegation-brief-contract/SKILL.md) | A fixed structure for the handoff brief when an orchestrating loop delegates work to an agent — mechanism, exclusive working path, prohibitions, gates, proof standard, stop line, report format | Writing a delegation brief that doesn't turn into rework, and verifying what a delegated agent reports back |
+| [`backup-recoverability-canary`](skills/backup-recoverability-canary/SKILL.md) | Proves round-trip recoverability of an encrypted off-site backup with a synthetic canary and independent key escrow, before trusting it as grounds to delete local originals | Deleting local originals after backing them up to an encrypted remote, or periodically re-checking an existing backup's recoverability |
+| [`interface-quality-gate`](skills/interface-quality-gate/SKILL.md) | A mechanical-plus-visual quality gate for any UI — AI-tells lint pass, multi-viewport screenshot checks, frontend-standards checklist | Reviewing any generated or edited web page, app screen, dashboard, or mobile layout before calling it done |
+| [`agent-prompt-architecture`](skills/agent-prompt-architecture/SKILL.md) | A repeatable method for designing and auditing an agent's system prompt, rules file, tool-use guidance, and memory/compaction instructions | Improving a system prompt or rules file that isn't working, or auditing one for bloat and contradictions before adding to it |
+
 ## September 9: design and workflow skills
 
 Three practical methods for making terminal interfaces clearer, transferring tool workflows safely, and keeping product design coherent from user journey through verification.
