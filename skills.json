@@ -3,6 +3,33 @@
   "weeks": [
     {
       "week": "2026-W37",
+      "date": "2026-09-09",
+      "skills": [
+        {
+          "name": "terminal-ui-quality-guardrail",
+          "slug": "terminal-ui-quality-guardrail",
+          "description": "Review terminal and text-interface changes for clear hierarchy, readable contrast, keyboard-visible state, and useful status information before treating a visual change as complete.",
+          "useFor": "Reviewing a terminal theme, status line, prompt, pane layout, or text interface after a visual change.",
+          "path": "skills/terminal-ui-quality-guardrail"
+        },
+        {
+          "name": "safe-cross-tool-configuration-transfer",
+          "slug": "safe-cross-tool-configuration-transfer",
+          "description": "Transfer a useful workflow pattern between developer tools by inspecting configuration safely, translating intent into the target tool native surface, and verifying the smallest reversible change.",
+          "useFor": "Adapting a rule, command, hook, skill, or integration from one developer tool to another without copying private configuration.",
+          "path": "skills/safe-cross-tool-configuration-transfer"
+        },
+        {
+          "name": "coherent-product-design-workflow",
+          "slug": "coherent-product-design-workflow",
+          "description": "Turn a product change into a coherent interface by defining the user job and states first, compiling reusable visual and interaction rules, then verifying the primary journey across real conditions.",
+          "useFor": "Designing or redesigning a product surface so its states, components, accessibility, and visual rules remain coherent.",
+          "path": "skills/coherent-product-design-workflow"
+        }
+      ]
+    },
+    {
+      "week": "2026-W37",
       "date": "2026-09-06",
       "skills": [
         {
