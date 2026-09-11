@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "weeks": [
+    {
+      "week": "2026-W37",
+      "date": "2026-09-11",
+      "skills": [
+        {
+          "name": "hash-locked-plan-release",
+          "slug": "hash-locked-plan-release",
+          "description": "Gate execution of any nontrivial plan behind a recorded consultation, an explicit user agreement, and a content-hash lock, so a plan can never run under an agreement that was given to a different version of it.",
+          "useFor": "Plan-then-execute agent workflows where a plan edit must always revoke a stale go-ahead, and pre-authorizing a proven low-risk revision class without loosening hard stops on destructive or scope-expanding changes.",
+          "path": "skills/hash-locked-plan-release"
+        },
+        {
+          "name": "swarm-eligibility-gate",
+          "slug": "swarm-eligibility-gate",
+          "description": "Decide whether a task actually warrants fanning out multiple parallel agents before doing it, route eligible work across three generic roles with required-return contracts, and downgrade gracefully instead of silently duplicating work when a role is unavailable.",
+          "useFor": "Deciding whether a substantial task actually benefits from parallel agents before reaching for a fan-out by reflex, and choosing a safe downgrade when a swarm node times out or is unavailable.",
+          "path": "skills/swarm-eligibility-gate"
+        }
+      ]
+    },
     {
       "week": "2026-W37",
       "date": "2026-09-10",
@@ -549,6 +569,11 @@
     },
     {
       "date": "2026-09-10",
+      "week": "2026-W37",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-09-11",
       "week": "2026-W37",
       "outcome": "qualified-delta"
     }

@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 11: plan-release gating and swarm eligibility
+
+Two practical methods: locking plan execution to the exact hash a user actually agreed to (so an edited plan can never run under a stale sign-off), and deciding whether a task genuinely warrants a multi-agent fan-out before reaching for one.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`hash-locked-plan-release`](skills/hash-locked-plan-release/SKILL.md) | Gates execution of any nontrivial plan behind a recorded consultation, an explicit user agreement, and a content-hash lock, so a plan can never run under an agreement given to a different version of it | Plan-then-execute agent workflows where a plan edit must always revoke a stale go-ahead, and pre-authorizing a proven low-risk revision class without loosening hard stops on destructive or scope-expanding changes |
+| [`swarm-eligibility-gate`](skills/swarm-eligibility-gate/SKILL.md) | Decides whether a task actually warrants fanning out multiple parallel agents before doing it, routes eligible work across three generic roles with required-return contracts, and downgrades gracefully instead of silently duplicating work when a role is unavailable | Deciding whether a substantial task actually benefits from parallel agents before reaching for a fan-out by reflex, and choosing a safe downgrade when a swarm node times out or is unavailable |
+
 ## September 10: delivery, delegation, and interface-quality skills
 
 Eight practical methods spanning post-merge production verification, safely delegating to and sandboxing other AI CLIs, code-graph-aware editing, a reusable delegation-brief structure, backup recoverability proof, UI quality gating, and system-prompt architecture.
