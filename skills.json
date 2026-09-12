@@ -1,6 +1,61 @@
 {
-  "updated": "2026-09-11",
+  "updated": "2026-09-12",
   "weeks": [
+    {
+      "week": "2026-W37",
+      "date": "2026-09-12",
+      "skills": [
+        {
+          "name": "safeguard-fallback-reroute",
+          "slug": "safeguard-fallback-reroute",
+          "description": "Recover full-quality output when a safety classifier silently downgrades your session to a weaker fallback model, instead of accepting the fallback's degraded work as final.",
+          "useFor": "Noticing a silent model downgrade mid-session and working up a reframe/decompose/invert/escalate recovery ladder instead of retrying the same prompt or accepting the fallback's output as equivalent.",
+          "path": "skills/safeguard-fallback-reroute"
+        },
+        {
+          "name": "pre-push-ship-checklist-template",
+          "slug": "pre-push-ship-checklist-template",
+          "description": "A six-gate checklist for shipping a change to any stateful service \u2014 ownership map, multi-source rule audit, structural gate, regression replay, safe restart, and one real end-to-end smoke test \u2014 run before every push.",
+          "useFor": "Shipping a change to a long-running stateful service where a broken deploy is expensive to notice after the fact, and building a ship checklist for a project that doesn't have one yet.",
+          "path": "skills/pre-push-ship-checklist-template"
+        },
+        {
+          "name": "cas-approval-gate",
+          "slug": "cas-approval-gate",
+          "description": "An atomic compare-and-swap two-phase state machine that makes an autonomous agent's risky action provably impossible to execute without an explicit, allow-listed human's approval \u2014 closing the race-condition gap a plain \"ask permission\" flag leaves open.",
+          "useFor": "Pipelines where an autonomous agent proposes code-writing, spending, or state-mutating actions, and reviewing an existing approval flow for a race condition between checking and acting.",
+          "path": "skills/cas-approval-gate"
+        },
+        {
+          "name": "verified-destination-routing-gate",
+          "slug": "verified-destination-routing-gate",
+          "description": "Before posting or mutating a single external destination, classify the payload into exactly one destination class and verify that destination against a freshly-read allowlist \u2014 never a cached ID \u2014 refusing on any ambiguity.",
+          "useFor": "Any bot or automation that posts to one of several possible external destinations, where sending to the wrong one would be embarrassing, unsafe, or hard to undo.",
+          "path": "skills/verified-destination-routing-gate"
+        },
+        {
+          "name": "cross-cli-delegation-preflight",
+          "slug": "cross-cli-delegation-preflight",
+          "description": "Operational hygiene rules for delegating work across multiple local AI CLIs or backends \u2014 a secretless read-only probe before any cross-tool call, a free-tier-first default, opaque aliases instead of real identifiers, and scoped, idempotent grants for any mutation triggered from a secondary surface.",
+          "useFor": "Any setup that routes tasks across more than one AI CLI or backend and needs consistent safety hygiene regardless of which one ends up doing the work.",
+          "path": "skills/cross-cli-delegation-preflight"
+        },
+        {
+          "name": "product-design-factory",
+          "slug": "product-design-factory",
+          "description": "A design pipeline that grounds a product surface in one job statement, generates exactly three comparable design directions before picking one, compiles a token/component contract, builds one real vertical slice, and requires an independent hostile review before calling it done.",
+          "useFor": "Designing or redesigning a product surface where you want a genuine comparison between options and a real quality bar before shipping, not just the first workable idea.",
+          "path": "skills/product-design-factory"
+        },
+        {
+          "name": "cross-vendor-verify-pipeline",
+          "slug": "cross-vendor-verify-pipeline",
+          "description": "A three-role coding pipeline \u2014 one model plans, a second (different-vendor) model executes, and a third independently redoes the build/test run itself rather than reading the executor's diff \u2014 so \"it passed\" is never taken on the executor's word alone.",
+          "useFor": "Coding tasks important enough to want a genuine second opinion on execution quality, especially work you'll hand off and not watch step-by-step.",
+          "path": "skills/cross-vendor-verify-pipeline"
+        }
+      ]
+    },
     {
       "week": "2026-W37",
       "date": "2026-09-11",
@@ -574,6 +629,11 @@
     },
     {
       "date": "2026-09-11",
+      "week": "2026-W37",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-09-12",
       "week": "2026-W37",
       "outcome": "qualified-delta"
     }

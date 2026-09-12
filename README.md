@@ -38,6 +38,20 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 12: safety recovery, ship gates, and delegation hygiene
+
+Seven practical methods: recovering from a silent safety-classifier model downgrade, a six-gate pre-push checklist for stateful services, a race-condition-proof human approval gate, verified destination routing before an external send, cross-CLI delegation hygiene, a three-direction design pipeline with mandatory hostile review, and a three-role coding pipeline where verification means independently redoing the work.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`safeguard-fallback-reroute`](skills/safeguard-fallback-reroute/SKILL.md) | Recovers full-quality output when a safety classifier silently downgrades your session to a weaker fallback model, instead of accepting the fallback's degraded work as final | Noticing a silent model downgrade mid-session and working up a reframe/decompose/invert/escalate recovery ladder instead of retrying the same prompt |
+| [`pre-push-ship-checklist-template`](skills/pre-push-ship-checklist-template/SKILL.md) | A six-gate checklist for shipping a change to any stateful service — ownership map, multi-source rule audit, structural gate, regression replay, safe restart, and one real end-to-end smoke test | Shipping a change to a long-running stateful service where a broken deploy is expensive to notice after the fact |
+| [`cas-approval-gate`](skills/cas-approval-gate/SKILL.md) | An atomic compare-and-swap two-phase state machine that makes an autonomous agent's risky action provably impossible to execute without an explicit, allow-listed human's approval | Pipelines where an autonomous agent proposes code-writing, spending, or state-mutating actions, and closing race-condition gaps in an existing approval flow |
+| [`verified-destination-routing-gate`](skills/verified-destination-routing-gate/SKILL.md) | Before posting or mutating a single external destination, classifies the payload into exactly one destination class and verifies it against a freshly-read allowlist — never a cached ID — refusing on any ambiguity | Any bot or automation that posts to one of several possible external destinations, where sending to the wrong one would be embarrassing or hard to undo |
+| [`cross-cli-delegation-preflight`](skills/cross-cli-delegation-preflight/SKILL.md) | Operational hygiene rules for delegating work across multiple local AI CLIs or backends — a secretless probe first, a free-tier-first default, opaque aliases, and scoped idempotent grants for remote-triggered mutations | Any setup that routes tasks across more than one AI CLI or backend and needs consistent safety hygiene regardless of which one does the work |
+| [`product-design-factory`](skills/product-design-factory/SKILL.md) | A design pipeline that grounds a surface in one job statement, generates exactly three comparable directions before picking one, and requires an independent hostile review before calling it done | Designing or redesigning a product surface where you want a genuine comparison between options and a real quality bar before shipping |
+| [`cross-vendor-verify-pipeline`](skills/cross-vendor-verify-pipeline/SKILL.md) | A three-role coding pipeline — one model plans, a second different-vendor model executes, and a third independently redoes the build/test run itself rather than reading the executor's diff | Coding tasks important enough to want a genuine second opinion on execution quality, especially work you'll hand off and not watch step-by-step |
+
 ## September 11: plan-release gating and swarm eligibility
 
 Two practical methods: locking plan execution to the exact hash a user actually agreed to (so an edited plan can never run under a stale sign-off), and deciding whether a task genuinely warrants a multi-agent fan-out before reaching for one.
