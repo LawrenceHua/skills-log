@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "weeks": [
+    {
+      "week": "2026-W38",
+      "date": "2026-09-14",
+      "skills": [
+        {
+          "name": "self-pruning-knowledge-ledger",
+          "slug": "self-pruning-knowledge-ledger",
+          "description": "Keep an always-loaded rules/lessons file from growing without bound by having a pipeline append one-line distilled entries, snapshot the full file before every prune, and tier older entries into on-demand deep-reference files instead of re-loading the whole history every session.",
+          "useFor": "An assistant's always-loaded system prompt, rules file, or memory index that keeps growing because something keeps appending to it, and you want lessons to accumulate indefinitely without a forced choice between keeping everything inline or deleting old lessons.",
+          "path": "skills/self-pruning-knowledge-ledger"
+        },
+        {
+          "name": "signal-to-ticket-pipeline",
+          "slug": "signal-to-ticket-pipeline",
+          "description": "Turn an ambient stream of unstructured signal (a chat channel, an inbox, voice notes) into scored, classified, ticketed work items automatically \u2014 with a cost cap, per-run rate limit, hash-based dedup, a sanitize pass on every external write, and a VERIFIED / CODE-SHIPPED-NOT-VERIFIED probe before any item is called done.",
+          "useFor": "A channel, inbox, or recording stream that generates real signal irregularly, where you want it triaged into tracked work without a human reading every message, and without the noise or silent-drop failure modes of an unstructured 'just watch the channel' agent.",
+          "path": "skills/signal-to-ticket-pipeline"
+        }
+      ]
+    },
     {
       "week": "2026-W37",
       "date": "2026-09-12",
@@ -641,6 +661,11 @@
       "date": "2026-09-13",
       "week": "2026-W37",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-09-14",
+      "week": "2026-W38",
+      "outcome": "qualified-delta"
     }
   ]
 }

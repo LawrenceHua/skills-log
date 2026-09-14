@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 14: knowledge-ledger and signal-triage pipelines
+
+Two practical methods: keeping an always-loaded rules/lessons file from growing without bound via automated distillation and tiered archiving, and turning an ambient chat/inbox/voice-note stream into scored, classified, ticketed work with hard cost/rate/dedup limits and a real verification probe before anything is called done.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`self-pruning-knowledge-ledger`](skills/self-pruning-knowledge-ledger/SKILL.md) | Keeps an always-loaded rules/lessons file from growing without bound by having a pipeline append one-line distilled entries, snapshot the full file before every prune, and tier older entries into on-demand deep-reference files instead of re-loading the whole history every session | An assistant's always-loaded system prompt, rules file, or memory index that keeps growing because something keeps appending to it, and you want lessons to accumulate indefinitely without a forced choice between keeping everything inline or deleting old lessons |
+| [`signal-to-ticket-pipeline`](skills/signal-to-ticket-pipeline/SKILL.md) | Turns an ambient stream of unstructured signal (a chat channel, an inbox, voice notes) into scored, classified, ticketed work items automatically — with a cost cap, per-run rate limit, hash-based dedup, a sanitize pass on every external write, and a VERIFIED/CODE-SHIPPED-NOT-VERIFIED probe before any item is called done | A channel, inbox, or recording stream that generates real signal irregularly, where you want it triaged into tracked work without a human reading every message, and without the noise or silent-drop failure modes of an unstructured "just watch the channel" agent |
+
 ## September 12: safety recovery, ship gates, and delegation hygiene
 
 Seven practical methods: recovering from a silent safety-classifier model downgrade, a six-gate pre-push checklist for stateful services, a race-condition-proof human approval gate, verified destination routing before an external send, cross-CLI delegation hygiene, a three-direction design pipeline with mandatory hostile review, and a three-role coding pipeline where verification means independently redoing the work.
