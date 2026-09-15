@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "weeks": [
+    {
+      "week": "2026-W38",
+      "date": "2026-09-15",
+      "skills": [
+        {
+          "name": "cross-agent-behavior-observation",
+          "slug": "cross-agent-behavior-observation",
+          "description": "Safely learn and adapt another AI agent or assistant's working style into your own tool's workflow, using a privacy-ranked source order, a redaction pass, and verified/inferred/unverified tagging, instead of ingesting its raw transcripts or leaking its prompts.",
+          "useFor": "Porting good execution habits from one AI assistant/CLI to another (autonomy boundaries, verification discipline, delegation style) without copying leaked prompts or private session content.",
+          "path": "skills/cross-agent-behavior-observation"
+        },
+        {
+          "name": "brev-cli",
+          "slug": "brev-cli",
+          "description": "Manage GPU and CPU cloud instances from the command line with the Brev CLI \u2014 search, create, SSH/exec, editor integration, file copy, port-forwarding, and safe teardown, for ML training, fine-tuning, and inference workloads.",
+          "useFor": "Provisioning or tearing down cloud GPU/CPU instances for ML training, fine-tuning, or inference work from the command line.",
+          "path": "skills/brev-cli"
+        }
+      ]
+    },
     {
       "week": "2026-W38",
       "date": "2026-09-14",
@@ -664,6 +684,11 @@
     },
     {
       "date": "2026-09-14",
+      "week": "2026-W38",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-09-15",
       "week": "2026-W38",
       "outcome": "qualified-delta"
     }

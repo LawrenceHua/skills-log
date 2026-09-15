@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 15: cross-agent style transfer and a GPU-CLI reference
+
+Two practical methods: safely porting good working habits from one AI agent/assistant into another without ever ingesting its raw transcripts or leaking its prompts, and a full command reference for provisioning and tearing down GPU/CPU cloud instances from the terminal.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`cross-agent-behavior-observation`](skills/cross-agent-behavior-observation/SKILL.md) | Safely learns and adapts another AI agent or assistant's working style into your own tool's workflow, using a privacy-ranked source order, a redaction pass, and verified/inferred/unverified tagging, instead of ingesting its raw transcripts or leaking its prompts | Porting good execution habits from one AI assistant/CLI to another (autonomy boundaries, verification discipline, delegation style) without copying leaked prompts or private session content |
+| [`brev-cli`](skills/brev-cli/SKILL.md) | Manages GPU and CPU cloud instances from the command line with the Brev CLI — search, create, SSH/exec, editor integration, file copy, port-forwarding, and safe teardown | Provisioning or tearing down cloud GPU/CPU instances for ML training, fine-tuning, or inference work from the command line |
+
 ## September 14: knowledge-ledger and signal-triage pipelines
 
 Two practical methods: keeping an always-loaded rules/lessons file from growing without bound via automated distillation and tiered archiving, and turning an ambient chat/inbox/voice-note stream into scored, classified, ticketed work with hard cost/rate/dedup limits and a real verification probe before anything is called done.
