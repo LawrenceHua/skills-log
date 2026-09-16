@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 16: concurrent review and pre-plan interrogation
+
+Two practical methods: running a second independent AI agent as a concurrent, read-only "shadow" reviewer while the primary agent keeps working — advisory only, never proof until reproduced — and a bounded up-front interrogation phase that front-loads every clarifying question before locking a plan for unattended execution, since there's no one left to ask once it starts.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`shadow-reviewer-mesh`](skills/shadow-reviewer-mesh/SKILL.md) | Runs a second, independent AI agent as a concurrent read-only reviewer while your primary agent keeps working, so a second set of eyes finds gaps in real time — treating its output as an advisory lead, never as proof, until you personally reproduce the finding | Any nontrivial change you're about to ship without another human's eyes on it, or auditing an existing "ask another model" habit that's started treating a second opinion as proof instead of a lead to verify |
+| [`preplan-interrogation-gate`](skills/preplan-interrogation-gate/SKILL.md) | Before locking a plan for autonomous or walk-away execution, runs one bounded round of clarifying questions covering objective, constraints, and objectively-testable acceptance criteria — stopping once another answer wouldn't change the plan | Handing off a defined-end-state task to unattended or long-running autonomous execution, where you won't be present to answer a question mid-run |
+
 ## September 15: cross-agent style transfer and a GPU-CLI reference
 
 Two practical methods: safely porting good working habits from one AI agent/assistant into another without ever ingesting its raw transcripts or leaking its prompts, and a full command reference for provisioning and tearing down GPU/CPU cloud instances from the terminal.

@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "weeks": [
+    {
+      "week": "2026-W38",
+      "date": "2026-09-16",
+      "skills": [
+        {
+          "name": "shadow-reviewer-mesh",
+          "slug": "shadow-reviewer-mesh",
+          "description": "Run a second, independent AI agent as a concurrent read-only reviewer while your primary agent keeps working, so a second set of eyes finds gaps in real time \u2014 treating its output as an advisory lead, never as proof, until you personally reproduce the finding.",
+          "useFor": "Any nontrivial change you're about to ship without another human's eyes on it, or auditing an existing 'ask another model' habit that's started treating a second opinion as proof instead of a lead to verify.",
+          "path": "skills/shadow-reviewer-mesh"
+        },
+        {
+          "name": "preplan-interrogation-gate",
+          "slug": "preplan-interrogation-gate",
+          "description": "Before locking a plan for autonomous or walk-away execution, run one bounded round of clarifying questions covering objective, constraints, and objectively-testable acceptance criteria \u2014 stopping once another answer wouldn't change the plan \u2014 so ambiguity gets resolved before there's no one left to ask.",
+          "useFor": "Handing off a defined-end-state task to unattended or long-running autonomous execution, where you won't be present to answer a question mid-run.",
+          "path": "skills/preplan-interrogation-gate"
+        }
+      ]
+    },
     {
       "week": "2026-W38",
       "date": "2026-09-15",
@@ -689,6 +709,11 @@
     },
     {
       "date": "2026-09-15",
+      "week": "2026-W38",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-09-16",
       "week": "2026-W38",
       "outcome": "qualified-delta"
     }
