@@ -1,6 +1,33 @@
 {
-  "updated": "2026-09-16",
+  "updated": "2026-09-20",
   "weeks": [
+    {
+      "week": "2026-W38",
+      "date": "2026-09-20",
+      "skills": [
+        {
+          "name": "scheduled-job-proof-layers",
+          "slug": "scheduled-job-proof-layers",
+          "description": "Prove a scheduled automation (cron, timer, launchd-style agent) really works by verifying four independent layers \u2014 source, installed scheduler definition, runtime code actually loaded, and a fresh semantic receipt \u2014 because \"last exit = 0\" and \"the fix is merged\" each prove far less than they sound like.",
+          "useFor": "Confirming a merged fix to a cron job, timer, or background agent actually took effect, and diagnosing a job whose scheduler status is green but whose output is stale or wrong \u2014 without re-running side-effecting jobs as a diagnostic.",
+          "path": "skills/scheduled-job-proof-layers"
+        },
+        {
+          "name": "launch-or-block-orchestration",
+          "slug": "launch-or-block-orchestration",
+          "description": "Run a hierarchical multi-agent program without stalling in its own admission layer \u2014 check launch preconditions once at launch, keep pre-execution review to one planner pass plus one verifier pass, require receipts for every fan-out claim, and treat a working period with zero real launches as a harness defect.",
+          "useFor": "Setting up or debugging a coordinator that launches sub-agents in layers, especially a run that 'worked all night' but produced nothing because gates kept re-checking and re-reviewing instead of launching.",
+          "path": "skills/launch-or-block-orchestration"
+        },
+        {
+          "name": "long-run-agent-job-supervision",
+          "slug": "long-run-agent-job-supervision",
+          "description": "Supervise a long-running background AI-agent job without killing healthy work or launching duplicates \u2014 one reconnectable launch with a private run directory, no reflexive wall-clock timeout, a repeated dead-versus-quiet evidence check, and defined stop conditions with cancellation limited to the recorded process group.",
+          "useFor": "A background agent run that has gone quiet or whose wrapper timed out, where you need to tell 'still working' from 'dead' before deciding to kill or relaunch.",
+          "path": "skills/long-run-agent-job-supervision"
+        }
+      ]
+    },
     {
       "week": "2026-W38",
       "date": "2026-09-16",
@@ -714,6 +741,11 @@
     },
     {
       "date": "2026-09-16",
+      "week": "2026-W38",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-09-20",
       "week": "2026-W38",
       "outcome": "qualified-delta"
     }

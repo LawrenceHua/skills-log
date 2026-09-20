@@ -38,6 +38,16 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 20: scheduled-job proof, orchestration admission, and long-run supervision
+
+Three practical methods: proving a scheduled automation actually works across four independent layers instead of trusting a green exit code, keeping a multi-level agent orchestration from stalling in its own admission gates, and telling a quiet long-running agent job from a dead one before you kill or relaunch it.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`scheduled-job-proof-layers`](skills/scheduled-job-proof-layers/SKILL.md) | Proves a scheduled automation (cron, timer, launchd-style agent) works by verifying source, the installed scheduler definition, the runtime code actually loaded, and a fresh semantic receipt — and refuses to re-run side-effecting jobs as a diagnostic | Confirming a merged fix to a cron job, timer, or background agent actually took effect, and diagnosing a job whose scheduler status is green but whose output is stale or wrong |
+| [`launch-or-block-orchestration`](skills/launch-or-block-orchestration/SKILL.md) | Runs a hierarchical multi-agent program without stalling in its own admission layer — launch preconditions checked once at launch, review capped at one planner pass plus one verifier pass, receipts required for every fan-out claim | Setting up or debugging a coordinator that launches sub-agents in layers, especially a run that "worked all night" but produced nothing |
+| [`long-run-agent-job-supervision`](skills/long-run-agent-job-supervision/SKILL.md) | Supervises a long-running background agent job with one reconnectable launch, no reflexive timeout, a repeated dead-versus-quiet evidence check, and a fixed list of valid stop conditions with narrow cancellation | A background agent run that has gone quiet or whose wrapper timed out, where you need to tell "still working" from "dead" before killing or relaunching |
+
 ## September 16: concurrent review and pre-plan interrogation
 
 Two practical methods: running a second independent AI agent as a concurrent, read-only "shadow" reviewer while the primary agent keeps working — advisory only, never proof until reproduced — and a bounded up-front interrogation phase that front-loads every clarifying question before locking a plan for unattended execution, since there's no one left to ask once it starts.
