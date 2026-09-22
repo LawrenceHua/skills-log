@@ -1,6 +1,26 @@
 {
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "weeks": [
+    {
+      "week": "2026-W39",
+      "date": "2026-09-22",
+      "skills": [
+        {
+          "name": "sensitive-index-atomic-swap",
+          "slug": "sensitive-index-atomic-swap",
+          "description": "Build a searchable catalog or cache over a sensitive raw source (chat transcripts, tickets, logs with PII) by ingesting only an explicit field allowlist, building into disposable staging, and atomically swapping it live only after a zero-error reconciliation pass \u2014 so a half-built or leaky index never goes live and raw sensitive content never enters the derived artifact.",
+          "useFor": "Building any local searchable index, cache, or catalog over a source containing sensitive raw content where the derived artifact needs to be safe to query or share more broadly than the source, and auditing an existing ingestion pipeline for raw sensitive fields being copied in without an allowlist.",
+          "path": "skills/sensitive-index-atomic-swap"
+        },
+        {
+          "name": "launch-profile-regression-harness",
+          "slug": "launch-profile-regression-harness",
+          "description": "For a CLI/TUI tool with multiple named launch profiles or config variants, actually boot each one in a real pseudo-terminal and assert it starts cleanly, instead of only statically linting config \u2014 run it as a scheduled, stripped-environment background watcher so a broken profile is caught between sessions.",
+          "useFor": "Maintaining more than one launch profile or config variant for a CLI/TUI tool and wanting confidence a config change didn't silently break one of them, or setting up a background watcher that catches boot-time failures automatically.",
+          "path": "skills/launch-profile-regression-harness"
+        }
+      ]
+    },
     {
       "week": "2026-W38",
       "date": "2026-09-20",
@@ -753,6 +773,11 @@
       "date": "2026-09-21",
       "week": "2026-W39",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-09-22",
+      "week": "2026-W39",
+      "outcome": "qualified-delta"
     }
   ]
 }

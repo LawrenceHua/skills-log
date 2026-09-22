@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## September 22: safe indexing over sensitive sources, and CLI launch-profile regression
+
+Two practical methods: building a searchable catalog or cache over sensitive raw data (transcripts, tickets, PII-bearing logs) via an explicit field allowlist plus a disposable-staging-then-atomic-swap build, so a half-built or leaky index never goes live; and actually booting every named CLI/TUI launch profile in a real pseudo-terminal on a schedule instead of only statically linting its config.
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`sensitive-index-atomic-swap`](skills/sensitive-index-atomic-swap/SKILL.md) | Builds a searchable catalog or cache over a sensitive raw source by ingesting only an explicit field allowlist, building into disposable staging, and atomically swapping it live only after a zero-error reconciliation pass | Building any local searchable index/cache over a source with sensitive raw content, where the derived artifact needs to be safe to query or share more broadly than the source, and a crashed or buggy build must never become the live index |
+| [`launch-profile-regression-harness`](skills/launch-profile-regression-harness/SKILL.md) | For a CLI/TUI tool with multiple named launch profiles, actually boots each one in a real pseudo-terminal and asserts it starts cleanly, run as a scheduled, stripped-environment background watcher | Maintaining more than one launch profile or config variant for a CLI/TUI tool and wanting confidence a config change didn't silently break one of them |
+
 ## September 20: scheduled-job proof, orchestration admission, and long-run supervision
 
 Three practical methods: proving a scheduled automation actually works across four independent layers instead of trusting a green exit code, keeping a multi-level agent orchestration from stalling in its own admission gates, and telling a quiet long-running agent job from a dead one before you kill or relaunch it.
