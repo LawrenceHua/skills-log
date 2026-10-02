@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 2, 2026: before-and-after visual evidence
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`before-after-visual-evidence`](skills/before-after-visual-evidence/SKILL.md) | Captures matched screenshots, compares pixels, and records observed visual changes | Reviewing layout, typography, and responsive changes with reproducible before-and-after evidence |
+
 ## September 22: safe indexing over sensitive sources, and CLI launch-profile regression
 
 Two practical methods: building a searchable catalog or cache over sensitive raw data (transcripts, tickets, PII-bearing logs) via an explicit field allowlist plus a disposable-staging-then-atomic-swap build, so a half-built or leaky index never goes live; and actually booting every named CLI/TUI launch profile in a real pseudo-terminal on a schedule instead of only statically linting its config.

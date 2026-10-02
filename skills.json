@@ -1,6 +1,19 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-10-02",
   "weeks": [
+    {
+      "week": "2026-W40",
+      "date": "2026-10-02",
+      "skills": [
+        {
+          "name": "before-after-visual-evidence",
+          "slug": "before-after-visual-evidence",
+          "description": "Capture matched before-and-after screenshots, compare pixels, and document intended changes and visual regressions.",
+          "useFor": "Reviewing layout, typography, and responsive changes with matched screenshot pairs and documented visual regressions.",
+          "path": "skills/before-after-visual-evidence"
+        }
+      ]
+    },
     {
       "week": "2026-W39",
       "date": "2026-09-22",
@@ -808,6 +821,11 @@
       "date": "2026-09-29",
       "week": "2026-W40",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-10-02",
+      "week": "2026-W40",
+      "outcome": "qualified-delta"
     }
   ]
 }
