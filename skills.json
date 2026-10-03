@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "weeks": [
+    {
+      "week": "2026-W40",
+      "date": "2026-10-03",
+      "skills": [
+        {
+          "name": "two-stage-intent-routing",
+          "slug": "two-stage-intent-routing",
+          "description": "Classify agent requests with deterministic rules, a bounded model fallback, and an advisory tool shortlist.",
+          "useFor": "Designing or reviewing task routers that must handle negation, mixed intent, and unavailable model fallback without guessing.",
+          "path": "skills/two-stage-intent-routing"
+        },
+        {
+          "name": "research-decision-brief",
+          "slug": "research-decision-brief",
+          "description": "Turn a contested research question into a conditional recommendation grounded in source evidence and contextual acceptance checks.",
+          "useFor": "Choosing between competing approaches when source quality, counter-evidence, feasibility, and contextual requirements can change the decision.",
+          "path": "skills/research-decision-brief"
+        }
+      ]
+    },
     {
       "week": "2026-W40",
       "date": "2026-10-02",
@@ -824,6 +844,11 @@
     },
     {
       "date": "2026-10-02",
+      "week": "2026-W40",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-03",
       "week": "2026-W40",
       "outcome": "qualified-delta"
     }

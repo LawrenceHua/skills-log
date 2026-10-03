@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 3, 2026: intent routing and research decisions
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`two-stage-intent-routing`](skills/two-stage-intent-routing/SKILL.md) | Classifies requests with deterministic rules, a bounded model fallback, and an advisory tool shortlist | Handling negation, mixed intent, and unavailable fallback when routing agent tasks |
+| [`research-decision-brief`](skills/research-decision-brief/SKILL.md) | Builds a conditional recommendation from source evidence, counter-evidence, and contextual acceptance checks | Choosing between competing approaches while making uncertainty and decision-changing evidence explicit |
+
 ## October 2, 2026: before-and-after visual evidence
 
 | Skill | What it does | Use it for |
