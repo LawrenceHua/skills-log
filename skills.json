@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "weeks": [
+    {
+      "week": "2026-W40",
+      "date": "2026-10-04",
+      "skills": [
+        {
+          "name": "design-with-intent",
+          "slug": "design-with-intent",
+          "description": "Edit a visual experience against an explicit intent brief, with journey evidence, protected details, independent critique, and a bounded stop rule.",
+          "useFor": "Reviewing a visual experience for coherent intent, meaningful details, and a complete user journey before accepting the design.",
+          "path": "skills/design-with-intent"
+        }
+      ]
+    },
     {
       "week": "2026-W40",
       "date": "2026-10-03",
@@ -849,6 +862,11 @@
     },
     {
       "date": "2026-10-03",
+      "week": "2026-W40",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-04",
       "week": "2026-W40",
       "outcome": "qualified-delta"
     }

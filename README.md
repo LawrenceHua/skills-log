@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 4, 2026: design with intent
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`design-with-intent`](skills/design-with-intent/SKILL.md) | Edits a visual experience against an intent brief, with journey evidence, protected details, critique, and a bounded stop rule | Reviewing coherent design choices and a complete user journey before accepting a visual experience |
+
 ## October 3, 2026: intent routing and research decisions
 
 | Skill | What it does | Use it for |
