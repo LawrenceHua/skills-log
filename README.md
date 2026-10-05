@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 5, 2026: transcript evidence digests
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`transcript-evidence-digest`](skills/transcript-evidence-digest/SKILL.md) | Extracts sentence-cited evidence with separate literal and semantic relevance scores | Reviewing supplied conversations against explicit criteria while preserving context, uncertainty, and counter-evidence |
+
 ## October 4, 2026: design with intent
 
 | Skill | What it does | Use it for |

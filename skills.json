@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "weeks": [
+    {
+      "week": "2026-W41",
+      "date": "2026-10-05",
+      "skills": [
+        {
+          "name": "transcript-evidence-digest",
+          "slug": "transcript-evidence-digest",
+          "description": "Turn supplied transcripts into a rubric-scored evidence digest with sentence citations and separate literal and semantic relevance checks.",
+          "useFor": "Reviewing supplied conversations against explicit criteria while preserving sentence citations, context, uncertainty, and counter-evidence.",
+          "path": "skills/transcript-evidence-digest"
+        }
+      ]
+    },
     {
       "week": "2026-W40",
       "date": "2026-10-04",
@@ -868,6 +881,11 @@
     {
       "date": "2026-10-04",
       "week": "2026-W40",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-05",
+      "week": "2026-W41",
       "outcome": "qualified-delta"
     }
   ]
