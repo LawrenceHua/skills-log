@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "weeks": [
+    {
+      "week": "2026-W41",
+      "date": "2026-10-06",
+      "skills": [
+        {
+          "name": "prepublication-content-scrub",
+          "slug": "prepublication-content-scrub",
+          "description": "Review exact outgoing artifacts for protected terms, sensitive patterns, and private context, then verify the rewritten final copy.",
+          "useFor": "Preparing public documentation, examples, or attachments from private working material without exposing protected details.",
+          "path": "skills/prepublication-content-scrub"
+        }
+      ]
+    },
     {
       "week": "2026-W41",
       "date": "2026-10-05",
@@ -885,6 +898,11 @@
     },
     {
       "date": "2026-10-05",
+      "week": "2026-W41",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-06",
       "week": "2026-W41",
       "outcome": "qualified-delta"
     }

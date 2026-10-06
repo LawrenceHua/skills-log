@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 6, 2026: prepublication content scrub
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`prepublication-content-scrub`](skills/prepublication-content-scrub/SKILL.md) | Checks outgoing artifacts for protected terms, sensitive patterns, and private context, then rechecks the rewritten copy | Preparing public documentation, examples, or attachments from private working material |
+
 ## October 5, 2026: transcript evidence digests
 
 | Skill | What it does | Use it for |
