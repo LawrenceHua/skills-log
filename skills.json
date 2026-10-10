@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-10",
   "weeks": [
+    {
+      "week": "2026-W41",
+      "date": "2026-10-10",
+      "skills": [
+        {
+          "name": "offline-archive-review",
+          "slug": "offline-archive-review",
+          "description": "Inspect preserved evidence and qualify historical findings without executing archived code or treating archive integrity as completed work.",
+          "useFor": "Assessing historical evidence and preparing an offline reuse brief with explicit integrity, coverage, and readiness limits.",
+          "path": "skills/offline-archive-review"
+        },
+        {
+          "name": "unconfirmed-submit-reconciliation",
+          "slug": "unconfirmed-submit-reconciliation",
+          "description": "Resolve uncertain browser submissions through authenticated history and payload matching while keeping repeat writes stopped.",
+          "useFor": "Checking whether an attempted form or post created a matching record without risking a duplicate submission.",
+          "path": "skills/unconfirmed-submit-reconciliation"
+        }
+      ]
+    },
     {
       "week": "2026-W41",
       "date": "2026-10-06",
@@ -910,6 +930,11 @@
       "date": "2026-10-07",
       "week": "2026-W41",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-10-10",
+      "week": "2026-W41",
+      "outcome": "qualified-delta"
     }
   ]
 }

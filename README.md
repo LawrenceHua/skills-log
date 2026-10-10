@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 10, 2026: archive evidence and uncertain submissions
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`offline-archive-review`](skills/offline-archive-review/SKILL.md) | Checks preserved evidence and qualifies historical findings without executing archived code | Preparing an offline reuse brief with explicit integrity, coverage, and readiness limits |
+| [`unconfirmed-submit-reconciliation`](skills/unconfirmed-submit-reconciliation/SKILL.md) | Matches an uncertain submission to authenticated history while keeping repeat writes stopped | Resolving attempted forms or posts without risking duplicate submissions |
+
 ## October 6, 2026: prepublication content scrub
 
 | Skill | What it does | Use it for |
