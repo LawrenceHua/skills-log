@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "weeks": [
+    {
+      "week": "2026-W41",
+      "date": "2026-10-11",
+      "skills": [
+        {
+          "name": "bounded-context-refresh",
+          "slug": "bounded-context-refresh",
+          "description": "Refresh approved sources within fixed retrieval budgets and report facts with independent cache freshness and explicit coverage gaps.",
+          "useFor": "Answering questions about recent information across approved sources while keeping retrieval bounded and missing coverage visible.",
+          "path": "skills/bounded-context-refresh"
+        },
+        {
+          "name": "manifest-bound-artifact-sync",
+          "slug": "manifest-bound-artifact-sync",
+          "description": "Copy approved text artifacts through a fixed byte manifest and verify complete destination, staged, and committed changes before any authorized publication.",
+          "useFor": "Promoting selected text artifacts from mixed local folders without copying private neighbors or committing unreviewed bytes.",
+          "path": "skills/manifest-bound-artifact-sync"
+        }
+      ]
+    },
     {
       "week": "2026-W41",
       "date": "2026-10-10",
@@ -933,6 +953,11 @@
     },
     {
       "date": "2026-10-10",
+      "week": "2026-W41",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-11",
       "week": "2026-W41",
       "outcome": "qualified-delta"
     }

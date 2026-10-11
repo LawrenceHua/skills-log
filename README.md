@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 11, 2026: bounded context and exact artifact promotion
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`bounded-context-refresh`](skills/bounded-context-refresh/SKILL.md) | Refreshes approved sources with bounded retrieval and independent cache freshness | Answering current questions while showing stale evidence and missing coverage |
+| [`manifest-bound-artifact-sync`](skills/manifest-bound-artifact-sync/SKILL.md) | Binds selected text artifacts to reviewed bytes through copying, staging, and publication checks | Promoting approved artifacts without copying private neighbors or unreviewed changes |
+
 ## October 10, 2026: archive evidence and uncertain submissions
 
 | Skill | What it does | Use it for |
