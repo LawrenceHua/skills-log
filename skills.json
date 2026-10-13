@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "weeks": [
+    {
+      "week": "2026-W42",
+      "date": "2026-10-13",
+      "skills": [
+        {
+          "name": "feedback-to-prototype-review",
+          "slug": "feedback-to-prototype-review",
+          "description": "Turn approved feedback into evidence-backed themes and capability-constrained prototype briefs with independent review and explicit unresolved issues.",
+          "useFor": "Finding recurring problems in approved feedback and assessing small prototype ideas against supported capabilities and independent criticism.",
+          "path": "skills/feedback-to-prototype-review"
+        }
+      ]
+    },
     {
       "week": "2026-W41",
       "date": "2026-10-11",
@@ -965,6 +978,11 @@
       "date": "2026-10-12",
       "week": "2026-W42",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-10-13",
+      "week": "2026-W42",
+      "outcome": "qualified-delta"
     }
   ]
 }

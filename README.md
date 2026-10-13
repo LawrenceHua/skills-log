@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 13, 2026: feedback to prototype review
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`feedback-to-prototype-review`](skills/feedback-to-prototype-review/SKILL.md) | Groups sanitized feedback into supported themes and reviews capability-constrained prototype briefs | Assessing recurring problems and testable ideas with independent criticism and explicit unresolved issues |
+
 ## October 11, 2026: bounded context and exact artifact promotion
 
 | Skill | What it does | Use it for |
