@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "weeks": [
+    {
+      "week": "2026-W42",
+      "date": "2026-10-16",
+      "skills": [
+        {
+          "name": "versioned-visual-feedback",
+          "slug": "versioned-visual-feedback",
+          "description": "Turn element-specific visual feedback into verified source revisions while preserving the viewed version, request outcomes, and design history.",
+          "useFor": "Applying feedback to selected visual elements while tracking the viewed revision, verified source changes, and unresolved requests.",
+          "path": "skills/versioned-visual-feedback"
+        }
+      ]
+    },
     {
       "week": "2026-W42",
       "date": "2026-10-13",
@@ -993,6 +1006,11 @@
       "date": "2026-10-15",
       "week": "2026-W42",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-10-16",
+      "week": "2026-W42",
+      "outcome": "qualified-delta"
     }
   ]
 }

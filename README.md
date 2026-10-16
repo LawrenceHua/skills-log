@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 16, 2026: versioned visual feedback
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`versioned-visual-feedback`](skills/versioned-visual-feedback/SKILL.md) | Connects selected visual feedback to verified source revisions and preserved design history | Applying element-specific changes while tracking viewed versions, evidence, and unresolved requests |
+
 ## October 13, 2026: feedback to prototype review
 
 | Skill | What it does | Use it for |
