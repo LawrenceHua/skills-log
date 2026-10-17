@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 17, 2026: claim receipts and budgeted fan-out
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`claim-receipt-reconciliation`](skills/claim-receipt-reconciliation/SKILL.md) | Connects completion claims to immutable check receipts and corrects unsupported wording | Preparing evidence-linked reports with claim decisions and missing checks |
+| [`budgeted-fanout-admission`](skills/budgeted-fanout-admission/SKILL.md) | Gates independent tasks on access, reserved budget, and resources while retaining every partition | Running bounded batches with explicit deferrals, usage accounting, and separate acceptance checks |
+
 ## October 16, 2026: versioned visual feedback
 
 | Skill | What it does | Use it for |

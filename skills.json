@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "weeks": [
+    {
+      "week": "2026-W42",
+      "date": "2026-10-17",
+      "skills": [
+        {
+          "name": "claim-receipt-reconciliation",
+          "slug": "claim-receipt-reconciliation",
+          "description": "Capture immutable check receipts and reconcile a completion draft against current-session evidence, correcting unsupported claims and recording each decision.",
+          "useFor": "Preparing completion reports with inline evidence, accurate status wording, and a structured record of supported claims and missing checks.",
+          "path": "skills/claim-receipt-reconciliation"
+        },
+        {
+          "name": "budgeted-fanout-admission",
+          "slug": "budgeted-fanout-admission",
+          "description": "Admit a fixed batch of independent tasks through ordered access, budget, and resource gates while reserving concurrent usage and accounting for every partition.",
+          "useFor": "Coordinating independent work under shared budget and resource limits while preserving deferred tasks and separating execution from acceptance.",
+          "path": "skills/budgeted-fanout-admission"
+        }
+      ]
+    },
     {
       "week": "2026-W42",
       "date": "2026-10-16",
@@ -1009,6 +1029,11 @@
     },
     {
       "date": "2026-10-16",
+      "week": "2026-W42",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-17",
       "week": "2026-W42",
       "outcome": "qualified-delta"
     }
