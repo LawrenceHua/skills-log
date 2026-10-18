@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 18, 2026: deepen before doing
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`deepen-before-doing`](skills/deepen-before-doing/SKILL.md) | Answers four questions (pro moves, raw material, methods, independent check) and rewrites the prompt to match | Making a brief deeper rather than bigger, with raw sources, decisive methods, and a check neither the doer nor the requester controls |
+
 ## October 17, 2026: claim receipts and budgeted fan-out
 
 | Skill | What it does | Use it for |

@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "weeks": [
+    {
+      "week": "2026-W42",
+      "date": "2026-10-18",
+      "skills": [
+        {
+          "name": "deepen-before-doing",
+          "slug": "deepen-before-doing",
+          "description": "Before a non-trivial task, brief, delegation, or unattended run, answer four questions (pro moves, raw material, methods, independent check) and rewrite the prompt to ask for exactly that.",
+          "useFor": "Making a brief deeper rather than bigger: pointing at raw sources, naming decisive methods, and requiring a check that neither the doer nor the requester controls.",
+          "path": "skills/deepen-before-doing"
+        }
+      ]
+    },
     {
       "week": "2026-W42",
       "date": "2026-10-17",
@@ -1034,6 +1047,11 @@
     },
     {
       "date": "2026-10-17",
+      "week": "2026-W42",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-18",
       "week": "2026-W42",
       "outcome": "qualified-delta"
     }
