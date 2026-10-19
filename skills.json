@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "weeks": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-19",
+      "skills": [
+        {
+          "name": "record-lessons",
+          "slug": "record-lessons",
+          "description": "After a task, record one append-only lesson as cue, lesson, and evidence, and mark it adopted only when independent evidence backs it.",
+          "useFor": "Turning what a task taught you into specific, evidence-cited instructions for future runs without self-confirming or loosening guardrails.",
+          "path": "skills/record-lessons"
+        },
+        {
+          "name": "capped-expert-routing",
+          "slug": "capped-expert-routing",
+          "description": "Route a non-trivial question to one or two domain-expert subagents under a hard concurrency cap, after a capacity and ownership check, then synthesize agreements and disagreements.",
+          "useFor": "Getting specialist views on a multi-domain question while keeping cost, machine load, and conflicting edits bounded.",
+          "path": "skills/capped-expert-routing"
+        }
+      ]
+    },
     {
       "week": "2026-W42",
       "date": "2026-10-18",
@@ -1053,6 +1073,11 @@
     {
       "date": "2026-10-18",
       "week": "2026-W42",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-19",
+      "week": "2026-W43",
       "outcome": "qualified-delta"
     }
   ]

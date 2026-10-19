@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 19, 2026: lessons and capped expert routing
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`record-lessons`](skills/record-lessons/SKILL.md) | Records append-only cue / lesson / evidence entries and adopts them only on independent evidence | Turning task outcomes into specific future instructions without self-confirmation or loosened guardrails |
+| [`capped-expert-routing`](skills/capped-expert-routing/SKILL.md) | Routes a question to one or two read-only domain experts under a capacity cap, then synthesizes | Getting specialist views on multi-domain questions while bounding cost, load, and edit conflicts |
+
 ## October 18, 2026: deepen before doing
 
 | Skill | What it does | Use it for |
