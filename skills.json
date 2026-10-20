@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "weeks": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-20",
+      "skills": [
+        {
+          "name": "direct-approval-and-diagnosis-gates",
+          "slug": "direct-approval-and-diagnosis-gates",
+          "description": "Four operator gates: get the owner's direct OK before spending or changing publish state, never exceed a cap on a general mandate, confirm a quiet system is paused on purpose before calling it broken, and report root causes before proposing a fix.",
+          "useFor": "Operating automations or agent fleets with a budget or publish switch, handling relayed requests, and writing incident reports where something merely looks down.",
+          "path": "skills/direct-approval-and-diagnosis-gates"
+        }
+      ]
+    },
     {
       "week": "2026-W43",
       "date": "2026-10-19",
@@ -1077,6 +1090,11 @@
     },
     {
       "date": "2026-10-19",
+      "week": "2026-W43",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-20",
       "week": "2026-W43",
       "outcome": "qualified-delta"
     }

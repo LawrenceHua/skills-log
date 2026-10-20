@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 20, 2026: direct approval and diagnosis gates
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`direct-approval-and-diagnosis-gates`](skills/direct-approval-and-diagnosis-gates/SKILL.md) | Requires direct approval for spend and publish-state changes, stops at caps, checks that a pause is unintended, and lists root causes before fixes | Operating automations with budgets or publish switches, handling relayed requests, and reporting blockers with evidence |
+
 ## October 19, 2026: lessons and capped expert routing
 
 | Skill | What it does | Use it for |
