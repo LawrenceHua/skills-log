@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 21, 2026: bounded output
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`bounded-output`](skills/bounded-output/SKILL.md) | Caps every command result and file read by bytes, keeps the full text on disk, and never truncates silently | Running builds, tests, listings, or log reads in a long agent session without inflating context cost |
+
 ## October 20, 2026: direct approval and diagnosis gates
 
 | Skill | What it does | Use it for |

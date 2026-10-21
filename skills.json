@@ -1,6 +1,19 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "weeks": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-21",
+      "skills": [
+        {
+          "name": "bounded-output",
+          "slug": "bounded-output",
+          "description": "Bound every command result and file read by bytes before it enters an agent's context, keeping the full text on disk, so one noisy log or listing does not tax every later request in the session.",
+          "useFor": "Running builds, tests, listings, or log reads in a long agent session without letting large output inflate context cost and latency.",
+          "path": "skills/bounded-output"
+        }
+      ]
+    },
     {
       "week": "2026-W43",
       "date": "2026-10-20",
@@ -1095,6 +1108,11 @@
     },
     {
       "date": "2026-10-20",
+      "week": "2026-W43",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-21",
       "week": "2026-W43",
       "outcome": "qualified-delta"
     }
