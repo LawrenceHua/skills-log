@@ -1,6 +1,47 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-24",
   "weeks": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-24",
+      "skills": [
+        {
+          "name": "document-evidence-audit",
+          "slug": "document-evidence-audit",
+          "description": "Stress-test a research or strategy document before anyone acts on it: every number sourced or flagged as a judgment, every link resolving, arithmetic consistent, costs and downside addressed, and unknowns stated.",
+          "useFor": "Vetting a confident report or agent-written memo before repeating its figures or making a costly or irreversible decision.",
+          "path": "skills/document-evidence-audit"
+        },
+        {
+          "name": "past-behavior-interviews",
+          "slug": "past-behavior-interviews",
+          "description": "Plan and judge customer interviews so they collect evidence about past behavior and commitments instead of compliments, generic claims, and feature ideas.",
+          "useFor": "Writing discovery-call questions and reviewing interview notes or summaries to separate what people did from what they said they might do.",
+          "path": "skills/past-behavior-interviews"
+        },
+        {
+          "name": "product-decision-bias-check",
+          "slug": "product-decision-bias-check",
+          "description": "Review a product decision with four bias questions about comparison, zero price, ownership, and expectation, while avoiding contested effect sizes.",
+          "useFor": "Sanity-checking pricing, free tiers, defaults, feature removals, and post-announcement metrics before committing.",
+          "path": "skills/product-decision-bias-check"
+        },
+        {
+          "name": "ambiguous-result-triage",
+          "slug": "ambiguous-result-triage",
+          "description": "Separate no data from unreadable from not run, classify blocked items by next step instead of asking questions, and suspect the probe before the artifact when a check contradicts verified work.",
+          "useFor": "Writing status reports and monitors where results are empty or partial, and triaging task lists full of blocked items.",
+          "path": "skills/ambiguous-result-triage"
+        },
+        {
+          "name": "harness-change-evaluation",
+          "slug": "harness-change-evaluation",
+          "description": "Test a change to an agent harness as a hypothesis using held-out real-failure cases, one change at a time, a fixed model, a baseline, and a pre-stated keep-or-revert rule.",
+          "useFor": "Finding out whether a prompt, rule, tool, hook, or routing edit actually improved agent results.",
+          "path": "skills/harness-change-evaluation"
+        }
+      ]
+    },
     {
       "week": "2026-W43",
       "date": "2026-10-21",
@@ -1113,6 +1154,11 @@
     },
     {
       "date": "2026-10-21",
+      "week": "2026-W43",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-24",
       "week": "2026-W43",
       "outcome": "qualified-delta"
     }

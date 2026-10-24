@@ -38,6 +38,16 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 24, 2026: evidence, interviews, and harness testing
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`document-evidence-audit`](skills/document-evidence-audit/SKILL.md) | Checks that every number is sourced or flagged, links resolve, arithmetic holds, downside is covered, and unknowns are stated | Vetting a confident report or agent-written memo before acting on its figures |
+| [`past-behavior-interviews`](skills/past-behavior-interviews/SKILL.md) | Keeps interview questions and summaries on past behavior and commitments, not compliments, fluff, or ideas | Writing discovery questions and judging interview notes |
+| [`product-decision-bias-check`](skills/product-decision-bias-check/SKILL.md) | Asks four bias questions about comparison, free pricing, ownership, and expectation without citing contested effect sizes | Reviewing pricing, defaults, free tiers, and feature removals |
+| [`ambiguous-result-triage`](skills/ambiguous-result-triage/SKILL.md) | Separates no data from unreadable from not run, classifies blocked items by next step, and suspects the probe first | Status reports, monitors, and blocked-task lists |
+| [`harness-change-evaluation`](skills/harness-change-evaluation/SKILL.md) | Tests a prompt, rule, tool, or hook change on held-out real-failure cases against a baseline with a pre-stated decision rule | Learning whether an agent-harness edit actually helped |
+
 ## October 21, 2026: bounded output
 
 | Skill | What it does | Use it for |
