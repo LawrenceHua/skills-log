@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "weeks": [
+    {
+      "week": "2026-W43",
+      "date": "2026-10-25",
+      "skills": [
+        {
+          "name": "story-first-video-production",
+          "slug": "story-first-video-production",
+          "description": "Plan and produce a narrative video through causal story beats, continuous-action coverage, a timed rough cut, and separate technical and editorial review.",
+          "useFor": "Planning narrative action, reviewing a timed rough cut, and verifying continuity, captions, and the complete video export.",
+          "path": "skills/story-first-video-production"
+        },
+        {
+          "name": "semantic-diagram-design",
+          "slug": "semantic-diagram-design",
+          "description": "Build a readable diagram by choosing its behavioral meaning before its visual form, preserving source relationships, and checking the rendered artifact for fidelity and accessibility.",
+          "useFor": "Explaining queue contention, lifecycles, and controlled boundaries without losing source facts during diagram simplification.",
+          "path": "skills/semantic-diagram-design"
+        }
+      ]
+    },
     {
       "week": "2026-W43",
       "date": "2026-10-24",
@@ -1159,6 +1179,11 @@
     },
     {
       "date": "2026-10-24",
+      "week": "2026-W43",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-25",
       "week": "2026-W43",
       "outcome": "qualified-delta"
     }

@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 25, 2026: story and diagram design
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`story-first-video-production`](skills/story-first-video-production/SKILL.md) | Builds causal story beats, continuous-action coverage, and a timed rough cut before final motion and export review | Planning narrative videos and diagnosing pacing, action, continuity, or caption problems |
+| [`semantic-diagram-design`](skills/semantic-diagram-design/SKILL.md) | Chooses behavioral meaning before layout and preserves source relationships through simplification and rendered checks | Explaining queues, lifecycles, and controlled boundaries in readable, accessible diagrams |
+
 ## October 24, 2026: evidence, interviews, and harness testing
 
 | Skill | What it does | Use it for |
