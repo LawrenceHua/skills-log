@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## October 26, 2026: capability and architecture evidence
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`cross-interface-capability-audit`](skills/cross-interface-capability-audit/SKILL.md) | Builds dated capability matrices with explicit coverage states and independently checked snapshot differences | Comparing agent interfaces and ranking task-relevant capability gaps for review |
+| [`architecture-claim-validation`](skills/architecture-claim-validation/SKILL.md) | Separates model integrity, code-anchor resolution, and claim support, then challenges the checks with negative controls | Auditing architecture claims and identifying unsupported evidence or ineffective checks |
+
 ## October 25, 2026: story and diagram design
 
 | Skill | What it does | Use it for |

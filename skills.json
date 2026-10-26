@@ -1,6 +1,26 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "weeks": [
+    {
+      "week": "2026-W44",
+      "date": "2026-10-26",
+      "skills": [
+        {
+          "name": "cross-interface-capability-audit",
+          "slug": "cross-interface-capability-audit",
+          "description": "Compare agent interfaces through a dated capability matrix that distinguishes configuration, observed availability, unknown inputs, and confirmed changes.",
+          "useFor": "Inventorying agent capabilities, comparing snapshots without false removals, and ranking task-relevant gaps for review.",
+          "path": "skills/cross-interface-capability-audit"
+        },
+        {
+          "name": "architecture-claim-validation",
+          "slug": "architecture-claim-validation",
+          "description": "Validate architecture claims through separate model-integrity, code-anchor, and evidence checks, then challenge the checks with isolated negative controls.",
+          "useFor": "Checking documented architecture against code and runtime evidence while exposing unsupported claims and gaps in the checking method.",
+          "path": "skills/architecture-claim-validation"
+        }
+      ]
+    },
     {
       "week": "2026-W43",
       "date": "2026-10-25",
@@ -1185,6 +1205,11 @@
     {
       "date": "2026-10-25",
       "week": "2026-W43",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-10-26",
+      "week": "2026-W44",
       "outcome": "qualified-delta"
     }
   ]
