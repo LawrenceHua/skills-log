@@ -38,6 +38,18 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 1, 2026: safe edits, claims, and unattended runs
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`guarded-file-edits`](skills/guarded-file-edits/SKILL.md) | Explains each read-before-write refusal and the single recovery it needs | Fixing stale-read and not-found edit failures and proving an edit landed |
+| [`recurring-automation-audit`](skills/recurring-automation-audit/SKILL.md) | Audits a scheduled automation from its own ledger and retires it reversibly | Deciding whether a recurring agent pass earns its cadence |
+| [`claim-provenance-fields`](skills/claim-provenance-fields/SKILL.md) | Words results by probe, artifact, control, and reference and flags six void-claim shapes | Writing honest status labels and reviewing "it works" reports |
+| [`tool-refusal-and-timeout-handling`](skills/tool-refusal-and-timeout-handling/SKILL.md) | Separates deliberate refusals from outages and requires a state read before retrying timed-out mutations | Avoiding duplicate deploys or posts and handling caps and dead targets |
+| [`unattended-deletion-runner-hardening`](skills/unattended-deletion-runner-hardening/SKILL.md) | Specifies lock handling, hash-bound approval, a git-state gate, isolated tests, and mutation-proved fixes | Building or reviewing a cleanup runner before it touches real data |
+| [`safe-archive-transfer`](skills/safe-archive-transfer/SKILL.md) | Requires one manifest, a secret preflight, and a restore check before any transfer or deletion | Backing up or migrating credential-bearing trees to remote storage |
+| [`ship-count-over-verify-count`](skills/ship-count-over-verify-count/SKILL.md) | Separates rehearsal from release and sorts blockers into five buckets | Recovering a project that is all audits and no shipped units |
+
 ## October 26, 2026: capability and architecture evidence
 
 | Skill | What it does | Use it for |

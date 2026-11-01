@@ -1,6 +1,61 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-01",
   "weeks": [
+    {
+      "week": "2026-W44",
+      "date": "2026-11-01",
+      "skills": [
+        {
+          "name": "guarded-file-edits",
+          "slug": "guarded-file-edits",
+          "description": "Edit files through an agent harness's read-before-write policy without burning turns on refusals: what each refusal means and the single recovery each needs.",
+          "useFor": "Recovering from stale-read or not-found edit refusals, avoiding blind writes to wrong paths, and proving an edit landed.",
+          "path": "skills/guarded-file-edits"
+        },
+        {
+          "name": "recurring-automation-audit",
+          "slug": "recurring-automation-audit",
+          "description": "Decide whether a recurring automation earns its cadence, audit it from its own ledger, and retire it reversibly when it does not.",
+          "useFor": "Checking whether a scheduled agent pass is producing anything a person used, and writing kill criteria before creating one.",
+          "path": "skills/recurring-automation-audit"
+        },
+        {
+          "name": "claim-provenance-fields",
+          "slug": "claim-provenance-fields",
+          "description": "Word a probe result as a claim a stranger can re-run by naming its probe, artifact, control, and reference, and spot six shapes of a true-looking but void claim.",
+          "useFor": "Writing status labels into handoffs and reviewing someone else's 'it works' report for missing controls and builder-chosen baselines.",
+          "path": "skills/claim-provenance-fields"
+        },
+        {
+          "name": "tool-refusal-and-timeout-handling",
+          "slug": "tool-refusal-and-timeout-handling",
+          "description": "Tell a deliberate tool refusal from an outage, read state before retrying any mutating call that timed out, and probe a surface before routing around it.",
+          "useFor": "Avoiding duplicate deploys, posts, or appends after a timeout, and handling caps, dead message targets, and human-turn-only operations.",
+          "path": "skills/tool-refusal-and-timeout-handling"
+        },
+        {
+          "name": "unattended-deletion-runner-hardening",
+          "slug": "unattended-deletion-runner-hardening",
+          "description": "Build, test, and review a tool that deletes files in unattended passes: lock handling, hash-bound preview approval, a fail-closed git gate, isolated tests, and mutation-proved fixes.",
+          "useFor": "Writing or reviewing a cleanup or retention runner before it touches real data.",
+          "path": "skills/unattended-deletion-runner-hardening"
+        },
+        {
+          "name": "safe-archive-transfer",
+          "slug": "safe-archive-transfer",
+          "description": "Archive or migrate files and credential-bearing project trees to remote storage with one manifest, a secret preflight, and verified recoverability before any local deletion.",
+          "useFor": "Bulk backups or uploads with rclone, rsync, or object storage, especially before deleting local originals.",
+          "path": "skills/safe-archive-transfer"
+        },
+        {
+          "name": "ship-count-over-verify-count",
+          "slug": "ship-count-over-verify-count",
+          "description": "Keep work pointed at what a real person can use: separate rehearsal from release, name the smallest shippable unit, and sort every blocker into five buckets.",
+          "useFor": "Recovering a project that is all audits and hardening, and batching the few things only a human can do.",
+          "path": "skills/ship-count-over-verify-count"
+        }
+      ]
+    },
     {
       "week": "2026-W44",
       "date": "2026-10-26",
@@ -1226,6 +1281,11 @@
       "date": "2026-10-29",
       "week": "2026-W44",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-01",
+      "week": "2026-W44",
+      "outcome": "qualified-delta"
     }
   ]
 }
