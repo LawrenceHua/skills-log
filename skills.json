@@ -1,6 +1,54 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-07",
   "weeks": [
+    {
+      "week": "2026-W45",
+      "date": "2026-11-07",
+      "skills": [
+        {
+          "name": "generated-media-qa-probes",
+          "slug": "generated-media-qa-probes",
+          "description": "Objective, self-tested checks for AI-generated video and voice: real motion vs camera push, image-to-video conditioning, true detail vs upscale, voice similarity, and caption timing.",
+          "useFor": "Gating or comparing generated clips and narration takes before a human reviews them.",
+          "path": "skills/generated-media-qa-probes"
+        },
+        {
+          "name": "held-out-gated-skill-patching",
+          "slug": "held-out-gated-skill-patching",
+          "description": "Evolve a skill or prompt package by tracing each failure to one component and admitting a patch only if it beats the prior version on held-out instances.",
+          "useFor": "Stopping ad hoc prompt drift and deciding whether a new skill version should replace the old one.",
+          "path": "skills/held-out-gated-skill-patching"
+        },
+        {
+          "name": "silent-failure-watchdog",
+          "slug": "silent-failure-watchdog",
+          "description": "Build an independent observer for a scheduled job that always exits 0, alerting once on stale, never-armed or self-contradicting state without crying wolf on absence.",
+          "useFor": "Adding a failure signal to watchers, cron jobs and unattended loops, and proving the alert path works.",
+          "path": "skills/silent-failure-watchdog"
+        },
+        {
+          "name": "approval-to-artifact-trace",
+          "slug": "approval-to-artifact-trace",
+          "description": "Walk five legs from an approval to a live artifact, find the dead leg, and verify the last one from outside the system.",
+          "useFor": "Answering 'did it actually ship?' when approval was granted but a ledger and the real world disagree.",
+          "path": "skills/approval-to-artifact-trace"
+        },
+        {
+          "name": "disk-space-reclaim-gates",
+          "slug": "disk-space-reclaim-gates",
+          "description": "Free space on a nearly full dev machine safely: explain why a delete freed nothing, check ownership and liveness, gate git clones and worktrees, then verify the number moved.",
+          "useFor": "Disk-full emergencies, snapshot or swap pinning, and cleaning old worktrees and caches without losing work.",
+          "path": "skills/disk-space-reclaim-gates"
+        },
+        {
+          "name": "work-to-skill-conversion",
+          "slug": "work-to-skill-conversion",
+          "description": "Turn finished work into a reusable agent skill by harvesting from artifacts, executing every written command, writing the negatives, and proving discoverability.",
+          "useFor": "Skillifying a project or incident so the next agent gets the lessons without the chat history.",
+          "path": "skills/work-to-skill-conversion"
+        }
+      ]
+    },
     {
       "week": "2026-W44",
       "date": "2026-11-01",
@@ -1285,6 +1333,11 @@
     {
       "date": "2026-11-01",
       "week": "2026-W44",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-07",
+      "week": "2026-W45",
       "outcome": "qualified-delta"
     }
   ]

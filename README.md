@@ -38,6 +38,17 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 7, 2026: media checks, watchdogs, and safe reclaim
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`generated-media-qa-probes`](skills/generated-media-qa-probes/SKILL.md) | Runs self-tested checks for real motion, image conditioning, true detail, voice similarity, and caption timing | Gating AI-generated clips and narration before human review |
+| [`held-out-gated-skill-patching`](skills/held-out-gated-skill-patching/SKILL.md) | Traces a failure to one component and admits a patch only if it wins on held-out instances | Stopping prompt drift and versioning skill changes |
+| [`silent-failure-watchdog`](skills/silent-failure-watchdog/SKILL.md) | Builds an independent observer that alerts once on stale or contradictory state, not on normal absence | Adding failure signals to cron jobs, watchers, and unattended loops |
+| [`approval-to-artifact-trace`](skills/approval-to-artifact-trace/SKILL.md) | Walks five legs from approval to live artifact and verifies the last from outside | Answering "did it actually ship?" when ledgers disagree |
+| [`disk-space-reclaim-gates`](skills/disk-space-reclaim-gates/SKILL.md) | Explains why deletes free nothing, checks ownership and liveness, and gates git clones and worktrees | Reclaiming disk space without losing work |
+| [`work-to-skill-conversion`](skills/work-to-skill-conversion/SKILL.md) | Harvests from artifacts, runs every command, writes the negatives, and proves discoverability | Turning a finished project into a reusable skill |
+
 ## November 1, 2026: safe edits, claims, and unattended runs
 
 | Skill | What it does | Use it for |
