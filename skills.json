@@ -1,6 +1,40 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "weeks": [
+    {
+      "week": "2026-W45",
+      "date": "2026-11-08",
+      "skills": [
+        {
+          "name": "browser-profile-cache-reclaim",
+          "slug": "browser-profile-cache-reclaim",
+          "description": "Reclaim disk from a retired automation's browser profile by deleting only regenerable cache directories while keeping cookies, saved logins and profile state.",
+          "useFor": "Freeing gigabytes from a closed project's app-data folder without deleting the whole profile or losing a logged-in session.",
+          "path": "skills/browser-profile-cache-reclaim"
+        },
+        {
+          "name": "device-install-budget-check",
+          "slug": "device-install-budget-check",
+          "description": "Decide whether a firmware or large-image update can reach a device using measured rate times wall-clock, and separate server fault from device fault with a slow-client control.",
+          "useFor": "Debugging over-the-air updates that succeed server-side while the device stays on the old version, and spotting a probe defect behind an 'up to date' response.",
+          "path": "skills/device-install-budget-check"
+        },
+        {
+          "name": "live-agent-session-triage",
+          "slug": "live-agent-session-triage",
+          "description": "Check running AI-agent sessions for looping, context bloat, stalls, claims without receipts and exhausted quota, steer instead of blind-killing, and restart only through a load gate.",
+          "useFor": "Finding which unattended agent sessions are stuck and restarting killed jobs without spiking the machine.",
+          "path": "skills/live-agent-session-triage"
+        },
+        {
+          "name": "data-location-ledger",
+          "slug": "data-location-ledger",
+          "description": "Keep an append-only map of where files and datasets live across disks and cloud, consult it before scanning any disk, and write intent before every move, upload or delete.",
+          "useFor": "Answering 'where did that go' without scanning disks, and keeping destructive moves auditable.",
+          "path": "skills/data-location-ledger"
+        }
+      ]
+    },
     {
       "week": "2026-W45",
       "date": "2026-11-07",
@@ -1337,6 +1371,11 @@
     },
     {
       "date": "2026-11-07",
+      "week": "2026-W45",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-08",
       "week": "2026-W45",
       "outcome": "qualified-delta"
     }

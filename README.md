@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 8, 2026: cache reclaim, install budgets, session triage, and data ledgers
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`browser-profile-cache-reclaim`](skills/browser-profile-cache-reclaim/SKILL.md) | Deletes only regenerable browser cache directories and keeps cookies, logins and profile state | Freeing disk from a retired automation's profile without losing a session |
+| [`device-install-budget-check`](skills/device-install-budget-check/SKILL.md) | Computes measured rate times wall-clock for an update and runs a slow-client control to split server from device fault | Debugging over-the-air updates that never land |
+| [`live-agent-session-triage`](skills/live-agent-session-triage/SKILL.md) | Checks sessions for loops, context bloat, stalls, unsupported claims and quota exhaustion, then restarts only through a load gate | Finding stuck unattended agent sessions without blind-killing them |
+| [`data-location-ledger`](skills/data-location-ledger/SKILL.md) | Keeps an append-only map of where data lives and records intent before every move, upload or delete | Answering "where did that go" without scanning disks |
+
 ## November 7, 2026: media checks, watchdogs, and safe reclaim
 
 | Skill | What it does | Use it for |
