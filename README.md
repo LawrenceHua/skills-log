@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 9, 2026: public releases, firmware gates, decision cards, and work ledgers
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`public-repo-exposure-review`](skills/public-repo-exposure-review/SKILL.md) | Decides the public set by allowlist, builds a fresh tree, runs a scanner ladder proven able to fail, and records the visibility flip as a decision | Open-sourcing or publishing a repo without leaking identifiers, history or images |
+| [`firmware-ota-release-gates`](skills/firmware-ota-release-gates/SKILL.md) | Scripts the build, writes a release manifest, counts an artifact marker, orders gates as the only rollback and decodes panics | Releasing over-the-air updates to embedded hardware and proving they reached the device |
+| [`decision-card-escalation`](skills/decision-card-escalation/SKILL.md) | Applies a four-part decide-or-escalate test and writes single-decision cards with a default and deadline, proven delivered from channel state | Routing approvals to a human without chat questions |
+| [`append-only-work-ledger`](skills/append-only-work-ledger/SKILL.md) | Keeps a schema-checked append-only ledger plus a backlog of re-runnable checks that flags VERIFIED items whose check fails | Audit trails across handoffs and catching stale verified claims |
+
 ## November 8, 2026: cache reclaim, install budgets, session triage, and data ledgers
 
 | Skill | What it does | Use it for |

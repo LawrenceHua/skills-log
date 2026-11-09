@@ -1,6 +1,40 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "weeks": [
+    {
+      "week": "2026-W46",
+      "date": "2026-11-09",
+      "skills": [
+        {
+          "name": "public-repo-exposure-review",
+          "slug": "public-repo-exposure-review",
+          "description": "Turn an internal working repository into a public one without leaking identifiers, history or images: decide the public set by allowlist, build the tree fresh, run a scanner ladder proven able to fail, and flip visibility only as a recorded decision.",
+          "useFor": "Open-sourcing or publishing a repo, or leak-checking a tree before it leaves a private workspace.",
+          "path": "skills/public-repo-exposure-review"
+        },
+        {
+          "name": "firmware-ota-release-gates",
+          "slug": "firmware-ota-release-gates",
+          "description": "Ship firmware to a device you cannot debug from a terminal: scripted build, release manifest, an artifact-level marker, gate order as the only rollback, decoded panics, one-actor flashing and a post-flash state probe.",
+          "useFor": "Releasing over-the-air updates to embedded hardware and proving the build actually reached the device.",
+          "path": "skills/firmware-ota-release-gates"
+        },
+        {
+          "name": "decision-card-escalation",
+          "slug": "decision-card-escalation",
+          "description": "Decide when an agent should take a decision itself versus escalate it, and write the escalation as a durable single-decision card with a default and deadline, proven delivered from the channel's own state.",
+          "useFor": "Routing approvals and judgment calls to a human without chat questions, and checking that a card really reached them.",
+          "path": "skills/decision-card-escalation"
+        },
+        {
+          "name": "append-only-work-ledger",
+          "slug": "append-only-work-ledger",
+          "description": "Record what an agent did, found, changed and verified in one append-only, schema-checked ledger, paired with a backlog of re-runnable checks that flags any VERIFIED item whose own check fails.",
+          "useFor": "Keeping an audit trail across handoffs and catching verified claims that have silently gone stale.",
+          "path": "skills/append-only-work-ledger"
+        }
+      ]
+    },
     {
       "week": "2026-W45",
       "date": "2026-11-08",
@@ -1377,6 +1411,11 @@
     {
       "date": "2026-11-08",
       "week": "2026-W45",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-09",
+      "week": "2026-W46",
       "outcome": "qualified-delta"
     }
   ]
