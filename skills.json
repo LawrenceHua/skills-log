@@ -1,6 +1,40 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "weeks": [
+    {
+      "week": "2026-W46",
+      "date": "2026-11-10",
+      "skills": [
+        {
+          "name": "device-handover-saga",
+          "slug": "device-handover-saga",
+          "description": "Hand a working bound device and its account to another person without a terminal: five owned legs, a one-tap owner approval, a re-runnable mover that never needs the device, and checks that come from outside the tool doing the move.",
+          "useFor": "Giving away account-bound hardware and proving the handover is ready and actually landed.",
+          "path": "skills/device-handover-saga"
+        },
+        {
+          "name": "device-identity-proof-triage",
+          "slug": "device-identity-proof-triage",
+          "description": "Debug 'the server ignores my device' by separating the identities a device presents, the proof mode behind a log line, the model string that selects its build, and probe identities that corrupt attribution.",
+          "useFor": "Devices that get no update or features, telling real devices from probes, and publishing builds under every announced model string.",
+          "path": "skills/device-identity-proof-triage"
+        },
+        {
+          "name": "live-hardware-measurement-controls",
+          "slug": "live-hardware-measurement-controls",
+          "description": "Measure a physical device or live system without fooling yourself: name the reference, prove the positive control, treat all-rejected runs as null, allow one actor, subtract starved windows, label whose clock made the number.",
+          "useFor": "Deciding whether a firmware fix worked and reviewing hardware regression gates and latency or wake-rate claims.",
+          "path": "skills/live-hardware-measurement-controls"
+        },
+        {
+          "name": "verification-reference-rule",
+          "slug": "verification-reference-rule",
+          "description": "Before labelling any check, name the reference the claim was compared against and prove that reference is current and non-empty; a checklist of probe-hygiene tests covering counts, regex misses, denominators, clocks and fixtures.",
+          "useFor": "Writing completion reports, reviewing 'it works' claims, and building self-tests that can actually fail.",
+          "path": "skills/verification-reference-rule"
+        }
+      ]
+    },
     {
       "week": "2026-W46",
       "date": "2026-11-09",
@@ -1415,6 +1449,11 @@
     },
     {
       "date": "2026-11-09",
+      "week": "2026-W46",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-10",
       "week": "2026-W46",
       "outcome": "qualified-delta"
     }

@@ -38,6 +38,15 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 10, 2026: device handovers, identity triage, measurement controls, and reference checks
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`device-handover-saga`](skills/device-handover-saga/SKILL.md) | Splits a handover into five owned legs, keeps the mover re-runnable without the device, and proves each leg from outside the tool | Giving away account-bound hardware and checking it really landed |
+| [`device-identity-proof-triage`](skills/device-identity-proof-triage/SKILL.md) | Separates device identities, proof modes and model strings, and keeps probe identities from corrupting logs | Debugging devices that get no update or features and telling real devices from probes |
+| [`live-hardware-measurement-controls`](skills/live-hardware-measurement-controls/SKILL.md) | Requires a named reference, a passing positive control, null-result handling, one actor and clock labels | Reviewing firmware fixes and latency or wake-rate claims |
+| [`verification-reference-rule`](skills/verification-reference-rule/SKILL.md) | Names and tests the reference behind every label, with a checklist of probe-hygiene failures | Writing completion reports and self-tests that can actually fail |
+
 ## November 9, 2026: public releases, firmware gates, decision cards, and work ledgers
 
 | Skill | What it does | Use it for |
