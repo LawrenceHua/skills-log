@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "weeks": [
+    {
+      "week": "2026-W46",
+      "date": "2026-11-12",
+      "skills": [
+        {
+          "name": "agent-tool-integration-contract",
+          "slug": "agent-tool-integration-contract",
+          "description": "Add a new command-line tool, skill or model lane to an agent setup so it is actually used: an eight-point tool contract (self-test with a failing arm, distinct refusal codes, bounded output, receipts, registry, ledger, discoverability) and the difference between installed, used and working.",
+          "useFor": "Connecting a new tool, skill or backend to an agent setup and proving it is discoverable and working, not just installed.",
+          "path": "skills/agent-tool-integration-contract"
+        },
+        {
+          "name": "long-horizon-handoff-protocol",
+          "slug": "long-horizon-handoff-protocol",
+          "description": "Keep long multi-session agent work honest: treat context as a cache, write an on-disk handoff file at 60-70% usage, prefer a clean reset plus handoff over a summary of a summary, and attach a receipt to every claim.",
+          "useFor": "Multi-session or compaction-prone tasks where state must survive a reset and status claims must carry evidence.",
+          "path": "skills/long-horizon-handoff-protocol"
+        }
+      ]
+    },
     {
       "week": "2026-W46",
       "date": "2026-11-10",
@@ -1461,6 +1481,11 @@
       "date": "2026-11-11",
       "week": "2026-W46",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-12",
+      "week": "2026-W46",
+      "outcome": "qualified-delta"
     }
   ]
 }

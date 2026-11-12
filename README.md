@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 12, 2026: tool integration and long-horizon handoffs
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`agent-tool-integration-contract`](skills/agent-tool-integration-contract/SKILL.md) | Applies an eight-point tool contract and separates installed, used and working, with five checks for silently useless integrations | Connecting a new tool, skill or backend to an agent setup and proving it works |
+| [`long-horizon-handoff-protocol`](skills/long-horizon-handoff-protocol/SKILL.md) | Treats context as a cache, writes a 13-section handoff file at 60-70% usage and puts a receipt on every claim | Multi-session or compaction-prone work that must survive a reset |
+
 ## November 10, 2026: device handovers, identity triage, measurement controls, and reference checks
 
 | Skill | What it does | Use it for |
