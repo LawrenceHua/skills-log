@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "weeks": [
+    {
+      "week": "2026-W46",
+      "date": "2026-11-14",
+      "skills": [
+        {
+          "name": "mutation-proof-patch-review",
+          "slug": "mutation-proof-patch-review",
+          "description": "Judge a code change by proving each behavior change is covered by a test that fails when that change is reverted, using scratch copies and a raw failing-test delta instead of a green suite.",
+          "useFor": "Reviewing agent-written patches and deciding whether passing tests actually protect the new behavior.",
+          "path": "skills/mutation-proof-patch-review"
+        },
+        {
+          "name": "evidence-judged-worker-fallback-chain",
+          "slug": "evidence-judged-worker-fallback-chain",
+          "description": "Run an unattended coding worker with an ordered fallback to a second model family, judging each worker by commits and a verdict line rather than exit code, with no silent substitution and a result bundle for the next step.",
+          "useFor": "Overnight or multi-round builds where a worker may hit a limit or exit cleanly having done nothing.",
+          "path": "skills/evidence-judged-worker-fallback-chain"
+        }
+      ]
+    },
     {
       "week": "2026-W46",
       "date": "2026-11-12",
@@ -1491,6 +1511,11 @@
       "date": "2026-11-13",
       "week": "2026-W46",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-14",
+      "week": "2026-W46",
+      "outcome": "qualified-delta"
     }
   ]
 }

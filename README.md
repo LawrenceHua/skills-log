@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 14, 2026: mutation-proof review and worker fallback chains
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`mutation-proof-patch-review`](skills/mutation-proof-patch-review/SKILL.md) | Reverts one behavior hunk at a time in scratch copies and requires a test that fails for each, comparing raw failing test ids | Deciding whether passing tests actually protect an agent-written change |
+| [`evidence-judged-worker-fallback-chain`](skills/evidence-judged-worker-fallback-chain/SKILL.md) | Chains workers from the same repo state, judges each by commits and a verdict line, forbids silent substitution and leaves a result bundle | Overnight or multi-round builds where a worker may hit a limit or do nothing |
+
 ## November 12, 2026: tool integration and long-horizon handoffs
 
 | Skill | What it does | Use it for |
