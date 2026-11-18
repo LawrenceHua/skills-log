@@ -1,6 +1,19 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "weeks": [
+    {
+      "week": "2026-W47",
+      "date": "2026-11-18",
+      "skills": [
+        {
+          "name": "concise-professional-format",
+          "slug": "concise-professional-format",
+          "description": "Writes scannable updates and decision briefs with a direct first line, consistent fields, and evidence that stays attached to each claim.",
+          "useFor": "Turning agent reports, handoffs, or competing options into short updates and decision briefs.",
+          "path": "skills/concise-professional-format"
+        }
+      ]
+    },
     {
       "week": "2026-W46",
       "date": "2026-11-14",
@@ -1531,6 +1544,11 @@
       "date": "2026-11-17",
       "week": "2026-W47",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-18",
+      "week": "2026-W47",
+      "outcome": "qualified-delta"
     }
   ]
 }

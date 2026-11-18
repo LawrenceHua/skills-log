@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 18, 2026 — concise updates and decision briefs
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`concise-professional-format`](skills/concise-professional-format/SKILL.md) | Writes scannable updates and decision briefs with a direct first line, consistent fields, and evidence that stays attached to each claim. | Turning agent reports, handoffs, or competing options into short updates and decision briefs. |
+
 ## November 14, 2026: mutation-proof review and worker fallback chains
 
 | Skill | What it does | Use it for |
