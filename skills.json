@@ -1,6 +1,19 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "weeks": [
+    {
+      "week": "2026-W47",
+      "date": "2026-11-19",
+      "skills": [
+        {
+          "name": "local-inference-benchmarking",
+          "slug": "local-inference-benchmarking",
+          "description": "Tunes a local model server with measured performance ceilings, paired benchmark controls, and full-context stability checks.",
+          "useFor": "Improving local model latency or throughput within a memory budget and reproducing the winning configuration.",
+          "path": "skills/local-inference-benchmarking"
+        }
+      ]
+    },
     {
       "week": "2026-W47",
       "date": "2026-11-18",
@@ -1547,6 +1560,11 @@
     },
     {
       "date": "2026-11-18",
+      "week": "2026-W47",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-19",
       "week": "2026-W47",
       "outcome": "qualified-delta"
     }

@@ -38,6 +38,12 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 19, 2026 — local inference benchmarking
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`local-inference-benchmarking`](skills/local-inference-benchmarking/SKILL.md) | Tunes a local model server with measured performance ceilings, paired benchmark controls, and full-context stability checks. | Improving local model latency or throughput within a memory budget and reproducing the winning configuration. |
+
 ## November 18, 2026 — concise updates and decision briefs
 
 | Skill | What it does | Use it for |
