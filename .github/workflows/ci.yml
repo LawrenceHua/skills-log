@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    # GitHub-hosted, deliberately: this repository is PUBLIC, and the estate
+    # runner provisioner refuses to register a self-hosted runner for a public
+    # repository ("refusing persistent self-hosted execution of forkable
+    # code"). Hosted minutes are free for public repositories.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # The check itself is dependency-free and runs on any Node >=18.
+          # Pinning keeps it independent of whatever Node the runner happens
+          # to have on PATH.
+          node-version: 20
+
+      # There is no build in this repository -- it is an index plus one
+      # directory per skill. The check below is the invariant the README
+      # already documents ("skills.json lists every skill from every week"),
+      # plus the SKILL.md frontmatter contract, plus 1:1 agreement between the
+      # index and the tree in BOTH directions.
+      #
+      # Proof that it is not a placeholder -- run locally; the first line is the
+      # positive control and each of the rest must exit 1 for the named reason:
+      #   node scripts/validate-skills.mjs                      -> VERIFIED, exit 0
+      #   (add skills/ghost/SKILL.md, do not index it)          -> exit 1 unindexed
+      #   (rename name: in a SKILL.md)                          -> exit 1 mismatch
+      #   (point an index path at a missing dir)                -> exit 1 phantom
+      #   (delete description: from a frontmatter block)        -> exit 1 missing
+      - name: Check the skills index against the tree
+        run: node scripts/validate-skills.mjs

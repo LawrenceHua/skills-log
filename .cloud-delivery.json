@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "github": {
+    "repository": "LawrenceHua/skills-log",
+    "remote": "origin",
+    "base_branch": "main",
+    "required_contexts": [
+      "verify"
+    ]
+  },
+  "vercel": {
+    "required": false
+  },
+  "preflight": {
+    "commands": [
+      [
+        "node",
+        "scripts/validate-skills.mjs"
+      ]
+    ],
+    "timeout_seconds": 300
+  },
+  "watch": {
+    "timeout_seconds": 900,
+    "poll_seconds": 10
+  },
+  "delivery": {
+    "pr_title": "ci: enforce the skills index contract",
+    "pr_body": "Adds .github/workflows/ci.yml so this repository can produce a CI receipt.\n\nThere is no build here and never was: the repository is skills.json plus one\ndirectory per skill. So the honest check is the invariant the README already\ndocuments -- \"skills.json lists every skill from every week\" -- enforced against\nthe tree, not an `echo ok`.\n\n`scripts/validate-skills.mjs` (dependency-free) checks:\n\n- every entry has non-empty name, slug, description, useFor, path\n- path equals skills/<slug>, and that directory exists with a SKILL.md\n- that SKILL.md has frontmatter with non-empty name: and description:\n- the frontmatter name EQUALS the indexed name (catches a rename in one place)\n- slugs are unique\n- every directory under skills/ is indexed, and every indexed slug has a directory\n\nPROOF IT IS NOT THEATRE\nIt passes on the current tree (117 skills across 33 weeks) and was mutation-tested against four\nseparate corruptions, each of which exits 1 for the right reason: an unindexed\nskill directory, a renamed frontmatter name, an index path pointing at a missing\ndirectory, and a removed description. Re-run commands are in the workflow file.\n\nRUNNER\nGitHub-hosted on purpose. This repository is public, and\n~/ci-local/bin/provision-air-runner.sh refuses to register a self-hosted runner\nfor a public repository -- persistent self-hosted execution of forkable code.\nHosted minutes are free for public repositories.\n\nDraft delivery candidate created by cloud-delivery-v1. No merge, no deploy.\n"
+  }
+}
