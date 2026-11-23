@@ -1,6 +1,26 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-23",
   "weeks": [
+    {
+      "week": "2026-W48",
+      "date": "2026-11-23",
+      "skills": [
+        {
+          "name": "assumed-healthy-contradiction-hunt",
+          "slug": "assumed-healthy-contradiction-hunt",
+          "description": "Sweep read-only for systems that look green but are broken (health endpoints over dead dependencies, shadow tool copies, stranded inboxes, zombie processes, orphaned locks), then try to refute every hit before anyone edits.",
+          "useFor": "Auditing unattended setups and post-incident blind spots where every dashboard stayed green.",
+          "path": "skills/assumed-healthy-contradiction-hunt"
+        },
+        {
+          "name": "health-sentinel-guarded-baseline",
+          "slug": "health-sentinel-guarded-baseline",
+          "description": "Design or run a health check that fails closed with UNKNOWN, labels baseline comparisons as reports rather than proof, classifies process exits and memory signals instead of counting them, and has a kill switch and self-tests.",
+          "useFor": "Writing or reviewing agent-setup diagnostics, and answering what got worse or why things are slow and costly.",
+          "path": "skills/health-sentinel-guarded-baseline"
+        }
+      ]
+    },
     {
       "week": "2026-W47",
       "date": "2026-11-19",
@@ -1572,6 +1592,11 @@
       "date": "2026-11-21",
       "week": "2026-W47",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-23",
+      "week": "2026-W48",
+      "outcome": "qualified-delta"
     }
   ]
 }

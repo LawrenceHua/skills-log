@@ -38,6 +38,13 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 23, 2026 — green-surface contradictions and guarded health checks
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`assumed-healthy-contradiction-hunt`](skills/assumed-healthy-contradiction-hunt/SKILL.md) | Sweeps read-only for systems that look green but are broken (health endpoints over dead dependencies, shadow tool copies, stranded inboxes, zombie processes, orphaned locks), then tries to refute every hit before anyone edits. | Auditing unattended setups and post-incident blind spots where every dashboard stayed green. |
+| [`health-sentinel-guarded-baseline`](skills/health-sentinel-guarded-baseline/SKILL.md) | Designs a health check that fails closed with UNKNOWN, labels baseline comparisons as reports rather than proof, and classifies exits and memory signals instead of counting them. | Writing or reviewing agent-setup diagnostics, and answering what got worse or why things are slow and costly. |
+
 ## November 19, 2026 — local inference benchmarking
 
 | Skill | What it does | Use it for |
