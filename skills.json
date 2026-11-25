@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "weeks": [
     {
       "week": "2026-W48",
@@ -1600,6 +1600,11 @@
     },
     {
       "date": "2026-11-24",
+      "week": "2026-W48",
+      "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-25",
       "week": "2026-W48",
       "outcome": "no-qualified-delta"
     }
