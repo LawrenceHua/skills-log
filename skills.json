@@ -1,6 +1,82 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "weeks": [
+    {
+      "week": "2026-W48",
+      "date": "2026-11-26",
+      "skills": [
+        {
+          "name": "remote-mcp-server-probe",
+          "slug": "remote-mcp-server-probe",
+          "description": "Prove a remote MCP server works for a real user through layered probes of health, handshake, tool discovery, a free tool call, the sign-in challenge and one human-run paid call, with a count of clicks to first value.",
+          "useFor": "Checking connectors after a deploy or before claiming they work, and finding the first layer that fails.",
+          "path": "skills/remote-mcp-server-probe"
+        },
+        {
+          "name": "secret-safe-credential-use",
+          "slug": "secret-safe-credential-use",
+          "description": "Use an API key, token or password in agent work without printing, copying or storing it, by checking presence by name, injecting it into one child process at use time and scanning outputs for leaks.",
+          "useFor": "Giving an agent or scheduled job a credential while keeping the value out of chats, logs, arguments and commits.",
+          "path": "skills/secret-safe-credential-use"
+        },
+        {
+          "name": "sha-pinned-security-review",
+          "slug": "sha-pinned-security-review",
+          "description": "Review a pull request or deploy candidate for security problems read-only at one pinned commit, using auth, server-side fetch, data and script checklists, and issue a verdict that applies to that commit alone.",
+          "useFor": "Security reviews, deploy pre-reviews and re-reviews after a rebase where an old approval must not cover new code.",
+          "path": "skills/sha-pinned-security-review"
+        },
+        {
+          "name": "cloud-spend-accrual-check",
+          "slug": "cloud-spend-accrual-check",
+          "description": "Watch cloud and API spend read-only against caps, prove with two timed readings whether a cost is still accruing before calling it a leak, and hand the owner one decision with a safe default.",
+          "useFor": "Daily cost checks and finding out whether a GPU, volume or deleted resource is still billing.",
+          "path": "skills/cloud-spend-accrual-check"
+        },
+        {
+          "name": "tls-cert-rollout-verify",
+          "slug": "tls-cert-rollout-verify",
+          "description": "Verify from outside that a renewed TLS certificate is served on every address of a host before the old one expires, with distinct verdicts for rolling, old, unexpected and probe-failed.",
+          "useFor": "Certificate renewal windows and separating a broken certificate monitor from a bad certificate.",
+          "path": "skills/tls-cert-rollout-verify"
+        },
+        {
+          "name": "read-only-persona-product-test",
+          "slug": "read-only-persona-product-test",
+          "description": "Walk live web products read-only as a first-time visitor, buyer, returning user and developer, count clicks to first value, and produce a per-product scorecard with ranked fixes.",
+          "useFor": "Pre-launch usability passes and testing production products as different users without changing anything.",
+          "path": "skills/read-only-persona-product-test"
+        },
+        {
+          "name": "agent-workstream-takeover",
+          "slug": "agent-workstream-takeover",
+          "description": "Take over another agent's workstream when it retires, runs out of quota or goes quiet, by reading its handoff files in order, claiming the work, recreating routines only from verbatim sources and proving it runs.",
+          "useFor": "Replacing a retired or stalled agent without duplicate runs, invented prompts or inherited approvals.",
+          "path": "skills/agent-workstream-takeover"
+        },
+        {
+          "name": "routine-to-script-conversion",
+          "slug": "routine-to-script-conversion",
+          "description": "Decide whether a recurring agent routine can run as a plain scheduled script that wakes a model only on exceptions, then package it as a portable run kit and prove it matches before switching.",
+          "useFor": "Cutting model usage on routines that usually report nothing, with a reversible switch.",
+          "path": "skills/routine-to-script-conversion"
+        },
+        {
+          "name": "repo-date-timebomb-scan",
+          "slug": "repo-date-timebomb-scan",
+          "description": "Find committed expiry dates that tests or runtime checks compare with the real clock, so a branch does not turn red or stop working on a day when nobody changed anything.",
+          "useFor": "Diagnosing sudden CI failures with no code change and sweeping release branches before expiries pass.",
+          "path": "skills/repo-date-timebomb-scan"
+        },
+        {
+          "name": "account-security-alert-triage",
+          "slug": "account-security-alert-triage",
+          "description": "Triage a sign-in, new-device or app-password alert read-only by checking who really sent it, matching it against your own agents' and machines' activity, and escalating unknowns without touching any link.",
+          "useFor": "Answering whether a security alert came from your own agent, from you, from an unknown party or from a phisher.",
+          "path": "skills/account-security-alert-triage"
+        }
+      ]
+    },
     {
       "week": "2026-W48",
       "date": "2026-11-23",
@@ -1607,6 +1683,11 @@
       "date": "2026-11-25",
       "week": "2026-W48",
       "outcome": "no-qualified-delta"
+    },
+    {
+      "date": "2026-11-26",
+      "week": "2026-W48",
+      "outcome": "qualified-delta"
     }
   ]
 }

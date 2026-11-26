@@ -38,6 +38,21 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 26, 2026: probes, security checks, cost checks and agent operations
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`remote-mcp-server-probe`](skills/remote-mcp-server-probe/SKILL.md) | Probes a remote MCP server layer by layer, from health and handshake to a free tool call, the sign-in challenge and one human-run paid call | Checking connectors after a deploy or before claiming they work |
+| [`secret-safe-credential-use`](skills/secret-safe-credential-use/SKILL.md) | Checks presence by name, injects a secret into one child process and scans outputs for leaks | Giving an agent or scheduled job a credential without exposing the value |
+| [`sha-pinned-security-review`](skills/sha-pinned-security-review/SKILL.md) | Reviews one pinned commit against auth, server-side fetch, data and script checklists | Security reviews and re-reviews after a rebase |
+| [`cloud-spend-accrual-check`](skills/cloud-spend-accrual-check/SKILL.md) | Uses two timed readings to separate accruing costs from frozen totals, then proposes one decision with a safe default | Daily cost checks and suspected leftover billing |
+| [`tls-cert-rollout-verify`](skills/tls-cert-rollout-verify/SKILL.md) | Samples every resolved address and keeps probe failure separate from certificate failure | Certificate renewal windows and unreliable certificate monitors |
+| [`read-only-persona-product-test`](skills/read-only-persona-product-test/SKILL.md) | Walks live products as four personas with writes blocked, then scores and ranks fixes | Pre-launch usability passes on production |
+| [`agent-workstream-takeover`](skills/agent-workstream-takeover/SKILL.md) | Reads handoff files in order, claims the work, recreates routines only from verbatim sources and proves a run | Replacing a retired or stalled agent |
+| [`routine-to-script-conversion`](skills/routine-to-script-conversion/SKILL.md) | Applies five tests, packages a run kit and compares script with routine before switching | Cutting model usage on routines that usually report nothing |
+| [`repo-date-timebomb-scan`](skills/repo-date-timebomb-scan/SKILL.md) | Finds committed expiry dates and traces which ones are compared with the real clock | CI that fails with no code change, and release-branch sweeps |
+| [`account-security-alert-triage`](skills/account-security-alert-triage/SKILL.md) | Verifies the sender, matches the event to your own activity and escalates unknowns | Answering whether a sign-in alert was one of your agents |
+
 ## November 23, 2026 — green-surface contradictions and guarded health checks
 
 | Skill | What it does | Use it for |
