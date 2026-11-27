@@ -1,6 +1,82 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "weeks": [
+    {
+      "week": "2026-W48",
+      "date": "2026-11-27",
+      "skills": [
+        {
+          "name": "right-sized-execution-path",
+          "slug": "right-sized-execution-path",
+          "description": "Choose the shortest of five execution paths (reply, live probe, timed research, additive change, full build) that still answers a request truthfully, and escalate openly when the evidence shows it needs more.",
+          "useFor": "Keeping status questions fast, additions from turning into rewrites and real engineering from being answered from memory.",
+          "path": "skills/right-sized-execution-path"
+        },
+        {
+          "name": "bounded-review-rounds",
+          "slug": "bounded-review-rounds",
+          "description": "Run multi-reviewer code review with approvals bound to one content hash, a three-round limit and a real, false or out-of-scope triage of every objection, so review loops end in an approval or a smaller redesign.",
+          "useFor": "Ending long cross-model review loops and deciding whether an earlier approval still applies after an edit.",
+          "path": "skills/bounded-review-rounds"
+        },
+        {
+          "name": "sync-cursor-repair",
+          "slug": "sync-cursor-repair",
+          "description": "Repair a recurring sync or relay that repeats old failures, recopies items or misses new ones by finding the stale cursor, catching up without deleting, and deriving the cursor from the newest success receipt on every run.",
+          "useFor": "Scheduled syncs that report fixed failures, say nothing is new while items wait, or copy the same records again.",
+          "path": "skills/sync-cursor-repair"
+        },
+        {
+          "name": "outbound-email-sender-trace",
+          "slug": "outbound-email-sender-trace",
+          "description": "Work out read-only which path and client sent an email from your own mailbox, using provider-added headers, send receipts and recorded approvals, and rule whether it was cleared, bypassed a gate or looks like compromise.",
+          "useFor": "Explaining a sent message nobody admits to and auditing which automation sent a campaign.",
+          "path": "skills/outbound-email-sender-trace"
+        },
+        {
+          "name": "clean-room-product-teardown",
+          "slug": "clean-room-product-teardown",
+          "description": "Study a product from lawfully observable evidence, separate observed facts from unknowns, rank its friction, and turn the transferable mechanics into an original design that is built and independently checked.",
+          "useFor": "Learning why another product or open-source tool works well and building your own version without copying it.",
+          "path": "skills/clean-room-product-teardown"
+        },
+        {
+          "name": "work-queue-stall-triage",
+          "slug": "work-queue-stall-triage",
+          "description": "Diagnose a growing work queue read-only by measuring launches, completions, workers and age, naming the stall pattern and its owner, and escalating once per new pattern instead of on every run.",
+          "useFor": "Throughput alerts, growing backlogs and monitors that repeat the same warning.",
+          "path": "skills/work-queue-stall-triage"
+        },
+        {
+          "name": "nightly-slippage-review",
+          "slug": "nightly-slippage-review",
+          "description": "Write a nightly evidence-backed review of what was claimed but unverified, promised but not done and broken, carry unfinished items forward with a day count, and hand the owner at most five decisions.",
+          "useFor": "End-of-day passes over several agents or automations and finding approved work that never happened.",
+          "path": "skills/nightly-slippage-review"
+        },
+        {
+          "name": "shared-state-refresh-loop",
+          "slug": "shared-state-refresh-loop",
+          "description": "Keep concurrent agents current through shared files by reading claims and notes at task start, re-reading at defined checkpoints before consequential actions, and writing back facts with their read times.",
+          "useFor": "Stopping agents that work side by side from duplicating tasks or acting on stale status.",
+          "path": "skills/shared-state-refresh-loop"
+        },
+        {
+          "name": "routine-overlap-audit",
+          "slug": "routine-overlap-audit",
+          "description": "Sweep scheduled routines across several agents for duplicates, drift between live configuration and the written record, and stale or missing handoff files, then recommend fixes without changing another agent's schedule.",
+          "useFor": "Weekly sweeps, rising usage or alert volume, and checking coverage before adding a new routine.",
+          "path": "skills/routine-overlap-audit"
+        },
+        {
+          "name": "skill-discovery-eval",
+          "slug": "skill-discovery-eval",
+          "description": "Test whether real requests reach the right handler and surface the right skill, using a fixed labelled case set, a no-dispatch router run, a model-free description coverage check and a failure table with causes.",
+          "useFor": "Checking that a growing skill library is still reachable after new skills, reworded descriptions or router changes.",
+          "path": "skills/skill-discovery-eval"
+        }
+      ]
+    },
     {
       "week": "2026-W48",
       "date": "2026-11-26",
@@ -1686,6 +1762,11 @@
     },
     {
       "date": "2026-11-26",
+      "week": "2026-W48",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-27",
       "week": "2026-W48",
       "outcome": "qualified-delta"
     }

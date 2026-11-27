@@ -38,6 +38,21 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 27, 2026: execution paths, review limits, repairs and audits
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`right-sized-execution-path`](skills/right-sized-execution-path/SKILL.md) | Picks the shortest of five paths that still answers truthfully, and escalates openly | Keeping status questions fast and additions from becoming rewrites |
+| [`bounded-review-rounds`](skills/bounded-review-rounds/SKILL.md) | Binds approvals to one hash, triages objections and stops after three rounds | Ending long cross-model review loops |
+| [`sync-cursor-repair`](skills/sync-cursor-repair/SKILL.md) | Finds the stale cursor, catches up without deleting and derives position from success receipts | Syncs that repeat old failures or miss new items |
+| [`outbound-email-sender-trace`](skills/outbound-email-sender-trace/SKILL.md) | Traces the submission path from provider-added headers and matches receipts and approvals | Explaining a sent message nobody admits to |
+| [`clean-room-product-teardown`](skills/clean-room-product-teardown/SKILL.md) | Builds an evidence dossier, ranks friction and designs an original version within stated boundaries | Learning from another product without copying it |
+| [`work-queue-stall-triage`](skills/work-queue-stall-triage/SKILL.md) | Names the stall pattern from live counts and escalates once per new pattern | Growing backlogs and repeated throughput alerts |
+| [`nightly-slippage-review`](skills/nightly-slippage-review/SKILL.md) | Records unverified claims, unkept promises and breakage, and carries items forward | End-of-day passes over agents and automations |
+| [`shared-state-refresh-loop`](skills/shared-state-refresh-loop/SKILL.md) | Reads claims and notes at start, re-reads at checkpoints and writes back dated facts | Stopping side-by-side agents from acting on stale status |
+| [`routine-overlap-audit`](skills/routine-overlap-audit/SKILL.md) | Finds duplicate routines, configuration drift and stale handoffs, then recommends fixes | Weekly sweeps and checks before adding a routine |
+| [`skill-discovery-eval`](skills/skill-discovery-eval/SKILL.md) | Scores labelled requests against router results and description coverage | Checking that skills still surface after changes |
+
 ## November 26, 2026: probes, security checks, cost checks and agent operations
 
 | Skill | What it does | Use it for |
