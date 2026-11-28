@@ -1,6 +1,68 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "weeks": [
+    {
+      "week": "2026-W48",
+      "date": "2026-11-28",
+      "skills": [
+        {
+          "name": "llm-job-circuit-breaker",
+          "slug": "llm-job-circuit-breaker",
+          "description": "Guard a scheduled LLM job with an exclusive lock, a hard timeout, a substantive-output check and a persisted circuit breaker, so exhausted quotas and empty runs stop repeating on every tick.",
+          "useFor": "Unattended model jobs that retry billing errors, exit 0 with nothing to show or hang and block later runs.",
+          "path": "skills/llm-job-circuit-breaker"
+        },
+        {
+          "name": "red-job-exit-classification",
+          "slug": "red-job-exit-classification",
+          "description": "Sort scheduled jobs that show a non-zero exit into deliberate stops, designed negative results, repairs awaiting their next run, out-of-scope jobs and real failures, using current evidence and never by forcing them green.",
+          "useFor": "Finding the truly broken jobs on a noisy scheduler dashboard without removing safety gates.",
+          "path": "skills/red-job-exit-classification"
+        },
+        {
+          "name": "paid-mcp-server-billing",
+          "slug": "paid-mcp-server-billing",
+          "description": "Design and verify billing for a paid MCP server, with paid access that fails closed, atomic per-tool quotas, safe payment webhooks, negative-control tests and human approval before live billing changes.",
+          "useFor": "Adding paid tiers or usage limits to an MCP server and reviewing entitlement, metering and webhook code.",
+          "path": "skills/paid-mcp-server-billing"
+        },
+        {
+          "name": "swiftui-interaction-craft",
+          "slug": "swiftui-interaction-craft",
+          "description": "Build or review SwiftUI screens for iOS 26 with restrained Liquid Glass, interruptible spring motion, haptics tied to real state changes, accessibility fallbacks and measured main-thread performance.",
+          "useFor": "Polishing or reviewing SwiftUI screens and separating what is proven from what still needs a physical device.",
+          "path": "skills/swiftui-interaction-craft"
+        },
+        {
+          "name": "operating-posture-gate",
+          "slug": "operating-posture-gate",
+          "description": "Read a short machine posture before heavy agent work, so a slow outside network, a priority burst, low storage or memory pressure changes behavior in agreed ways instead of causing needless restarts and retry storms.",
+          "useFor": "Running many agents on one machine and telling a slow internet connection apart from a local failure.",
+          "path": "skills/operating-posture-gate"
+        },
+        {
+          "name": "capacity-band-alerting",
+          "slug": "capacity-band-alerting",
+          "description": "Alert on low disk or other shrinking capacity using named bands with hysteresis and a time-to-floor forecast, so owners hear about real decline without a message for every wobble across a threshold.",
+          "useFor": "Fixing noisy low-disk monitors and catching a steady decline before it reaches the floor.",
+          "path": "skills/capacity-band-alerting"
+        },
+        {
+          "name": "hot-cold-skill-tiers",
+          "slug": "hot-cold-skill-tiers",
+          "description": "Keep an agent's always-listed skill catalog small by moving rarely used playbooks into a searchable cold library, loading one per task on demand and promoting it only after repeated use.",
+          "useFor": "Large skill libraries that take up context or cause wrong matches.",
+          "path": "skills/hot-cold-skill-tiers"
+        },
+        {
+          "name": "monitor-reading-reconciliation",
+          "slug": "monitor-reading-reconciliation",
+          "description": "Before acting on or repeating a number from a monitor, dashboard, alert or agent report, take a direct reading of the same thing, reconcile the two and report any defect in the monitor.",
+          "useFor": "Surprising alerts, disagreeing dashboards and status reports you are about to pass on.",
+          "path": "skills/monitor-reading-reconciliation"
+        }
+      ]
+    },
     {
       "week": "2026-W48",
       "date": "2026-11-27",
@@ -1767,6 +1829,11 @@
     },
     {
       "date": "2026-11-27",
+      "week": "2026-W48",
+      "outcome": "qualified-delta"
+    },
+    {
+      "date": "2026-11-28",
       "week": "2026-W48",
       "outcome": "qualified-delta"
     }

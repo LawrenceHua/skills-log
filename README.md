@@ -38,6 +38,19 @@ tools: if your assistant doesn't have a native skills system, just paste
 the relevant `SKILL.md` into the conversation and say "follow this
 methodology."
 
+## November 28, 2026: unattended jobs, paid tools, interface craft and honest readings
+
+| Skill | What it does | Use it for |
+|---|---|---|
+| [`llm-job-circuit-breaker`](skills/llm-job-circuit-breaker/SKILL.md) | Wraps a scheduled model job in a lock, a timeout, an output check and a persisted breaker | Stopping repeated quota errors, empty runs and hung jobs |
+| [`red-job-exit-classification`](skills/red-job-exit-classification/SKILL.md) | Sorts non-zero jobs into five evidence-backed classes without forcing them green | Finding real breakage on a noisy scheduler dashboard |
+| [`paid-mcp-server-billing`](skills/paid-mcp-server-billing/SKILL.md) | Designs fail-closed access, atomic quotas and safe payment webhooks with negative tests | Adding paid tiers to an MCP server |
+| [`swiftui-interaction-craft`](skills/swiftui-interaction-craft/SKILL.md) | Covers Liquid Glass, springs, haptics, accessibility and measured performance | Building or reviewing iOS 26 SwiftUI screens |
+| [`operating-posture-gate`](skills/operating-posture-gate/SKILL.md) | Reads machine and network conditions before heavy work and applies agreed limits | Avoiding needless restarts and retry storms |
+| [`capacity-band-alerting`](skills/capacity-band-alerting/SKILL.md) | Alerts on capacity bands with hysteresis and a time-to-floor forecast | Fixing noisy low-disk monitors |
+| [`hot-cold-skill-tiers`](skills/hot-cold-skill-tiers/SKILL.md) | Moves rare playbooks into a searchable library that loads on demand | Keeping a large skill catalog small |
+| [`monitor-reading-reconciliation`](skills/monitor-reading-reconciliation/SKILL.md) | Checks a reported number against a direct reading and classifies the difference | Surprising alerts and disagreeing dashboards |
+
 ## November 27, 2026: execution paths, review limits, repairs and audits
 
 | Skill | What it does | Use it for |
